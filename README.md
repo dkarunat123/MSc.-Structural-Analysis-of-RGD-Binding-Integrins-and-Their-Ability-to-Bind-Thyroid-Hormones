@@ -18,15 +18,11 @@ The research investigates potential interactions between thyroid hormones and RG
 ## Research Methods
 
 - Integrin sequence alignment and comparative analysis
-- Protein structure prediction and structural comparison
+- Protein structure prediction using AlphaFold and structural comparison
 - Molecular docking using HADDOCK
 - Binding affinity estimation using PRODIGY-Ligand
 - Statistical and cross-species comparisons
 
 ## Repository Contents
 
-Research data, analysis scripts, structural models, docking results, figures, and supplementary materials will be organized into dedicated folders.
-
-## Research Status
-
-This repository is currently being organized as part of the MSc thesis submission.
+Research data, analysis scripts, structural models, docking results, figures, and supplementary materials .....
