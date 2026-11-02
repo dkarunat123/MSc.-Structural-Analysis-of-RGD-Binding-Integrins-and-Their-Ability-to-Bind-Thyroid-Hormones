@@ -1,0 +1,10 @@
+ligand,reference_atom_index,reference_CIP,sdf_signed_volume,pdb_signed_volume,configuration_preserved
+T3,9,S,-2.61871,-2.61716,True
+T4,10,S,-2.61869,-2.61984,True
+rT3,9,S,-2.61883,-2.62035,True
+sT3,13,S,-2.61878,-2.62071,True
+sT4,15,S,-2.46013,-2.46188,True
+Cilengitide,15,S,-2.27378,-2.27221,True
+Cilengitide,17,R,-2.68223,-2.68548,True
+Cilengitide,19,S,-2.65545,-2.65823,True
+Cilengitide,28,S,2.62283,2.62369,True
