@@ -2,7 +2,6 @@
 
 **MSc Bioinformatics Thesis**  
 **University of Guelph | Heyland Lab**  
-**Researcher:** Dilma Karunathilake
 
 ## Project Overview
 
