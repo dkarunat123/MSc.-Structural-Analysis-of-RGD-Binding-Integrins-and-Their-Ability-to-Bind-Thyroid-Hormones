@@ -30,8 +30,6 @@ The analyses cover **48 integrin heterodimer models** (8 human, 24 sea urchin, a
 
 ### Key Software and Versions
 
-The versions below are those documented in the thesis Methods, rather than necessarily the latest available versions.
-
 | Tool | Version used | Purpose |
 |---|---|---|
 | AlphaFold | 3 | Prediction of integrin extracellular heterodimer structures |
