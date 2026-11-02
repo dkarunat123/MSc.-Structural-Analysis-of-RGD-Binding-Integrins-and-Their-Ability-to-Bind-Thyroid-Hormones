@@ -1,0 +1,12 @@
+"Check","Value"
+"Total_receptors",48
+"Human_receptors",8
+"Sea_urchin_receptors",24
+"Sea_anemone_receptors",16
+"Ligands",9
+"Affinity_measurements",432
+"Human_validation_pairs",5
+"Human_validation_measurements",45
+"OMA_alpha_nonhuman_subunits",12
+"OMA_beta_nonhuman_subunits",7
+"Max_abs_log_score_discrepancy",0
