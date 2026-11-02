@@ -1,0 +1,7 @@
+Panel,GroupType,Group,XSpecies,YSpecies,SpearmanRho
+A,Alpha,alpha6/alpha7-overlap,S. purpuratus,N. vectensis,0.8333333333333334
+B,Alpha,alphaV/alpha5/alpha8-related,S. purpuratus,H. sapiens,0.912141875543738
+C,Beta,beta1-related,N. vectensis,H. sapiens,0.9166666666666666
+D,Beta,beta1-related,S. purpuratus,H. sapiens,0.9
+E,Beta,beta1-related,S. purpuratus,N. vectensis,0.9833333333333333
+F,Beta,beta6-related,N. vectensis,H. sapiens,0.6166666666666667
