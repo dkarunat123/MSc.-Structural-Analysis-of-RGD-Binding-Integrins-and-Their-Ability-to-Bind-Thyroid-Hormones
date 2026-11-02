@@ -65,6 +65,6 @@ Individual folder README files provide further details where available.
 
 ## Interpretation and Scope
 
-- Binding affinities and ligand poses generated in this study are **computational predictions**, not direct experimental measurements.
-- The *S. purpuratus* and *N. vectensis* heterodimers are **candidate subunit combinations**; their physiological pairings have not been established experimentally.
+- Binding affinities and ligand poses generated in this study are computational predictions, not direct experimental measurements.
+- The *S. purpuratus* and *N. vectensis* heterodimers are candidate subunit combinations; their physiological pairings have not been established experimentally.
 - Similar predicted ligand preferences and binding-pocket architectures are consistent with potential evolutionary conservation, but do not independently establish receptor-mediated thyroid hormone signaling.
