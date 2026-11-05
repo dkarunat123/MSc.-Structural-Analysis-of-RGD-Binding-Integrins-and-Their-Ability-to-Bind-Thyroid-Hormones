@@ -1,0 +1,4 @@
+"Excluded_Sequence","Subunit_Type","Best_Retained_Match","Excluded_Length_aa","Retained_ECD_Length_aa","Query_Start","Query_End","Reference_Start","Reference_End","Reference_N_Flank_aa","Reference_C_Flank_aa","Identity_Percent","Reference_Coverage_Percent","Query_Coverage_Percent","Local_Alignment_Score"
+"SP_b_XP_030845946","beta","SP_b_BetaG_XP_030846197",351,786,3,340,1,343,0,443,41.71,43.64,96.3,765.5
+"SP_b_XP_030845945","beta","SP_b_Beta1A1_XP_030845944",409,802,3,392,408,801,407,1,47.24,49.13,95.35,1040
+"SP_a_XP_030836103","alpha","SP_a_AlphaV2_XP_030846762",377,899,14,366,18,293,17,606,38.06,30.7,93.63,590.5
