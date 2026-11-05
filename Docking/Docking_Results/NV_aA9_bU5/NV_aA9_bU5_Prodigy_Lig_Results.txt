@@ -1,0 +1,9 @@
+Job name(s)	DGprediction (Kcal/mol)	Kd (M)
+SA_aA9_bU5_Cilengitide	-9.35	1.40e-07
+SA_aA9_bU5_T3	-9.09	2.17e-07
+SA_aA9_bU5_T4	-8.57	5.23e-07
+
+Kd(M)
+1.40e-07
+2.17e-07
+5.23e-07
