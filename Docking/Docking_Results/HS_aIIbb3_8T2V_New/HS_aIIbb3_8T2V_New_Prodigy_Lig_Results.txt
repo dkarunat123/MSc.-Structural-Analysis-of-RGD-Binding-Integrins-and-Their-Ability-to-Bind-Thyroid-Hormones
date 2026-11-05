@@ -1,0 +1,21 @@
+Job name(s)	DGprediction (Kcal/mol)	Kd (M)
+aIIbb3_8T2V_Cilengitide	-10.33	2.68e-08
+aIIbb3_8T2V_T3	-9.88	5.73e-08
+aIIbb3_8T2V_T4	-9.83	6.23e-08
+aIIbb3_8T2V_TRIAC	-10.51	1.98e-08
+aIIbb3_8T2V_TETRAC	-10.42	2.30e-08
+aIIbb3_8T2V_sT3	-10.86	1.10e-08
+aIIbb3_8T2V_sT4	-10.14	3.69e-08
+aIIbb3_8T2V_rT3	-10.17	3.51e-08
+IIbb3_8T2V_T4AM	-6.98	7.65e-06
+
+Kd(M)
+2.68e-08
+5.73e-08
+6.23e-08
+1.98e-08
+2.30e-08
+1.10e-08
+3.69e-08
+3.51e-08
+7.65e-06
