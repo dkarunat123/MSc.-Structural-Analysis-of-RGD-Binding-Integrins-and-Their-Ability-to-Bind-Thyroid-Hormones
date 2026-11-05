@@ -1,0 +1,21 @@
+Job name(s)	DGprediction (Kcal/mol)	Kd (M)
+SA_aH6_b23_Cilengitide	-10.15	3.63e-08
+SA_aH6_b23_T3	-9.61	9.03e-08
+SA_aH6_b23_T4	-9.80	6.55e-08
+SA_aH6_b23_TRIAC	-10.91	1.01e-08
+SA_aH6_b23_TETRAC	-10.92	9.90e-09
+SA_aH6_b23_sT3	-10.77	1.28e-08
+SA_aH6_b23_sT4	-10.24	3.12e-08
+SA_aH6_b23_rT3	-9.73	7.38e-08
+SA_aH6_b23_T4AM	-6.62	1.40e-05
+
+Kd(M)
+3.63e-08
+9.03e-08
+6.55e-08
+1.01e-08
+9.90e-09
+1.28e-08
+3.12e-08
+7.38e-08
+1.40e-05
