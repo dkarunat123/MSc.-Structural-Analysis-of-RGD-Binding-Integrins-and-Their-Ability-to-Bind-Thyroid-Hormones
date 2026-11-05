@@ -1,0 +1,4 @@
+"Species","N_Receptors","N_Ligands","NBOOT_Per_Scale","Number_Of_Scales","Seed","Reused_Cache","NonRoot_Clusters_AU_AtLeast_90Pct","Pvclust_Version"
+"H. sapiens",8,9,1000000,10,123,FALSE,4,"2.2.0"
+"S. purpuratus",24,9,1000000,10,123,FALSE,4,"2.2.0"
+"N. vectensis",16,9,1000000,10,123,FALSE,2,"2.2.0"
