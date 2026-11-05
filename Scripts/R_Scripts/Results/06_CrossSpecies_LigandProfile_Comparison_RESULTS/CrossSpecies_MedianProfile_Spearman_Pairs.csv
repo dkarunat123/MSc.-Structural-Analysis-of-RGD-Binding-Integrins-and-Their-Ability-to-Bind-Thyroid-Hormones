@@ -1,0 +1,4 @@
+"Species_1","Species_2","N_Ligands","Spearman_rho"
+"H. sapiens","S. purpuratus",9,0.916666666666667
+"H. sapiens","N. vectensis",9,0.9
+"S. purpuratus","N. vectensis",9,0.983333333333333

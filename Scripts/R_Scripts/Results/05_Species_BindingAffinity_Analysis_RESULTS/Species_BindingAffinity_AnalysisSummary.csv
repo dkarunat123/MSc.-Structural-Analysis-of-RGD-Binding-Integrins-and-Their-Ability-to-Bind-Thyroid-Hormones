@@ -1,0 +1,4 @@
+"Species","N_Receptors","N_Ligands","Min_NegLog10KD","Max_NegLog10KD","Figure14_Ligand_Clustering","Figure15_Ligand_Clustering","Bootstrap_Replicates_Per_Scale"
+"H. sapiens",8,9,4.47886191629596,10.5767541260632,"Euclidean/complete (Script 04)","1-Spearman/complete",1000000
+"S. purpuratus",24,9,4.53760200210104,8.70114692359029,"Euclidean/complete (Script 04)","1-Spearman/complete",1000000
+"N. vectensis",16,9,4.40560744962457,8.51004152057516,"Euclidean/complete (Script 04)","1-Spearman/complete",1000000
