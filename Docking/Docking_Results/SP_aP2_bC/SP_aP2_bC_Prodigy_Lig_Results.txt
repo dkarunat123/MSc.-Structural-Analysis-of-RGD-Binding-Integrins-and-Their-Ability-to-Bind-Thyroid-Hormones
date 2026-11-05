@@ -1,0 +1,21 @@
+Job name(s)	DGprediction (Kcal/mol)	Kd (M)
+aP2_bC_Cilengitide	-10.11	3.88e-08
+aP2_bC_T3	-7.51	3.13e-06
+aP2_bC_T4	-7.76	2.05e-06
+aP2_bC_TRIAC	-10.79	1.23e-08
+aP2_bC_TETRAC	-10.64	1.59e-08
+aP2_bC_sT3	-8.57	5.23e-07
+aP2_bC_sT4	-8.38	7.20e-07
+aP2_bC_rT3	-9.28	1.58e-07
+aP2_bC_T4AM	-6.56	1.55e-05
+
+Kd(M)
+3.88e-08
+3.13e-06
+2.05e-06
+1.23e-08
+1.59e-08
+5.23e-07
+7.20e-07
+1.58e-07
+1.55e-05

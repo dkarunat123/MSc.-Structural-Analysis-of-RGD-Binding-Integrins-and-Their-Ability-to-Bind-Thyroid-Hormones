@@ -1,0 +1,21 @@
+Job name(s)	DGprediction (Kcal/mol)	Kd (M)
+SU_aP1_b1A1_Cilengitide	-9.75	7.13e-08
+SU_aP1_b1A1_T3	-8.65	4.57e-07
+SU_aP1_b1A1_T4	-8.98	2.62e-07
+SU_aP1_b1A1_TRIAC	-10.71	1.41e-08
+SU_aP1_b1A1_TETRAC	-10.69	1.46e-08
+SU_aP1_b1A1_sT3	-9.26	1.63e-07
+SU_aP1_b1A1_sT4	-8.84	3.31e-07
+SU_aP1_b1A1_rT3	-8.97	2.66e-07
+SU_aP1_b1A1_T4AM	-6.28	2.49e-05
+
+Kd(M)
+7.13e-08
+4.57e-07
+2.62e-07
+1.41e-08
+1.46e-08
+1.63e-07
+3.31e-07
+2.66e-07
+2.49e-05
