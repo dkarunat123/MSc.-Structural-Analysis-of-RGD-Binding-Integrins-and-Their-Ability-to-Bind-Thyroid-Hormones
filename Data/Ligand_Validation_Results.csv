@@ -1,0 +1,10 @@
+ligand,sdf,pdb,reference_heavy_atoms,pdb_heavy_atoms,reference_heavy_bonds,pdb_heavy_bonds,elemental_composition_matches,heavy_atom_connectivity_matches,stereocenters_checked,stereocenters_matching,status,note
+T3,T3_PubChem.sdf,ProtH_T3_PubChem_New.pdb,23,23,24,24,True,True,1,1,PASS,3D handedness matches for all SDF-assigned stereocenters
+T4,T4_PubChem.sdf,ProtH_T4_PubChem.pdb,24,24,25,25,True,True,1,1,PASS,3D handedness matches for all SDF-assigned stereocenters
+rT3,rT3_PubChem.sdf,ProtH_rT3_PubChem_New.pdb,23,23,24,24,True,True,1,1,PASS,3D handedness matches for all SDF-assigned stereocenters
+sT3,sT3_PubChem.sdf,ProtH_sT3_PubChem.pdb,27,27,28,28,True,True,1,1,PASS,3D handedness matches for all SDF-assigned stereocenters
+sT4,sT4_PubChem.sdf,ProtH_sT4_PubChem.pdb,28,28,29,29,True,True,1,1,PASS,3D handedness matches for all SDF-assigned stereocenters
+TRIAC,TRIAC_PubChem.sdf,ProtH_TRIAC_PubChem.pdb,21,21,22,22,True,True,0,0,PASS,Reference has no CIP-assigned stereocenters
+TETRAC,TETRAC_PubChem.sdf,ProtH_TETRAC_PubChem.pdb,22,22,23,23,True,True,0,0,PASS,Reference has no CIP-assigned stereocenters
+T4AM,T4AM_PubChem.sdf,ProtH_T4AM_PubChem.pdb,21,21,22,22,True,True,0,0,PASS,Reference has no CIP-assigned stereocenters
+Cilengitide,Cilengitide_PubChem.sdf,Lig_ProtH_Cilengitide_PubChem.pdb,42,42,43,43,True,True,4,4,PASS,3D handedness matches for all SDF-assigned stereocenters
