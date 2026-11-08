@@ -1,5 +1,3 @@
-<p align="center"><strong>PREVIEW OF THE INTERACTIVE THESIS ATLAS</strong><br>Click the image to explore the full interactive website (once GitHub Pages is enabled).</p>
-
 # Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones
 
 **MSc Bioinformatics thesis · University of Guelph · 2026**  
