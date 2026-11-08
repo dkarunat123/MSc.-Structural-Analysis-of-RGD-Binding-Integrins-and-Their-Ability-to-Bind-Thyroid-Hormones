@@ -115,12 +115,12 @@
       </aside>
       <div class="content">
         <section class="panel"><div class="panelhead"><div class="species-status" id="modelContext">Human · AlphaFold model</div><div class="kicker" id="figureId">Figure 14 · interactive exploration</div><h2 id="figureTitle">Predicted receptor–ligand affinities</h2><p id="figureDescription">Individual heterodimer scores calculated from your docking pipeline. Higher −log₁₀(KD) corresponds to a lower predicted dissociation constant.</p></div>
-          <div class="paneltop"><div><div class="method" id="method">48 receptor models · 9 ligands · Euclidean / complete linkage</div><div style="color:#60708a;font-size:11px;margin-top:4px" id="buildMarker">Interactive cells: numbers enabled · build 2026-11-08</div></div><div class="actions"><button type="button" class="action" id="exportSvg">Export SVG</button><button type="button" class="action primary" id="exportCsv">Download current CSV ↧</button></div></div>
+          <div class="paneltop"><div><div><div class="method" id="method">48 receptor models · 9 ligands · Euclidean / complete linkage</div><div id="auNotice" style="margin-top:5px;color:#a6384b;font-size:11px;font-weight:650">Red numbers = AU bootstrap support (%) · hover for exact AU/BP and cluster members</div></div></div><div class="actions"><button type="button" class="action" id="exportSvg">Export SVG</button><button type="button" class="action primary" id="exportCsv">Download current CSV ↧</button></div></div>
           <div class="vizArea" id="vizArea" aria-live="polite"><div id="chart" role="region" aria-label="Heatmap visualization"></div></div>
           <div class="legendrow"><div id="legendDescription">Predicted −log₁₀(KD) · higher = stronger predicted binding</div><div class="legend"><span id="legendMin">4.50</span><div class="gradient" id="gradient"></div><span id="legendMax">10.60</span></div></div>
         </section>
         <section class="inspector" aria-live="polite"><div><h3>Selected cell</h3><div class="big" id="cellTitle">Choose any cell to examine its score</div><p id="cellDescription">Move your cursor over a heatmap cell or click to examine a ligand–integrin interaction.</p></div><div class="scorepill"><strong id="cellScore">—</strong><small id="cellUnit">−log₁₀(KD)</small></div></section>
-        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours follow thesis Figure 20 (and structural benchmarking figures); heatmap gradients are unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 − ρ)/complete linkage for Figure 15. <strong>Original Figure 14 AU bootstrap labels are not shown</strong> because the corresponding saved <code>pvclust</code> objects and edge tables were not provided. Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
+        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours follow thesis Figure 20 (and structural benchmarking figures); heatmap gradients are unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 − ρ)/complete linkage for Figure 15. <strong>Figure 14 AU support values are drawn from the original saved 1,000,000-replicate <code>pvclust</code> results and validated against the exported branch membership, AU/BP tables, and original Figure 14 PDFs. The root node is unlabelled, as in the thesis.</strong> Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/figure14_bootstrap_support.csv">Figure 14 AU/BP bootstrap data</a> · <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
       </div>
     </section>
   </main>
@@ -143,6 +143,7 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
   // Structure identity from thesis Figure 20; heatmap palettes above encode numeric scores.
   const MODEL_COLORS = {'H. sapiens':'#396ea5','S. purpuratus':'#a641a6','N. vectensis':'#6f990c'};
   const MODEL_LIGHT = {'H. sapiens':'#8bc1f0','S. purpuratus':'#ec9de5','N. vectensis':'#c9df7d'};
+  const AU_BOOTSTRAP = {"H. sapiens":{"TETRAC|TRIAC":{"edge":1,"au":98.2524306050445,"bp":83.2525930601596,"height":0.630747979645898},"T3|T4":{"edge":2,"au":80.0305587500914,"bp":63.5541733561111,"height":0.763553809495337},"T3|T4|rT3":{"edge":3,"au":97.9577351343547,"bp":98.4450733430019,"height":0.972599845881019},"TETRAC|TRIAC|sT3":{"edge":4,"au":90.8274129690682,"bp":71.7333717227896,"height":1.07839399657373},"Cilengitide|sT4":{"edge":5,"au":84.1138298398637,"bp":59.0119458290751,"height":1.29029516114604},"Cilengitide|TETRAC|TRIAC|sT3|sT4":{"edge":6,"au":89.5905520101352,"bp":90.8713380169335,"height":1.71624357661381},"Cilengitide|T3|T4|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":7,"au":100.0,"bp":100.0,"height":3.79491133856379},"Cilengitide|T3|T4|T4AM|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":8,"au":100.0,"bp":100.0,"height":9.16167038588671}},"S. purpuratus":{"T3|T4":{"edge":1,"au":99.7599143602769,"bp":98.7928535812121,"height":0.840496514799487},"TETRAC|TRIAC":{"edge":2,"au":100.0,"bp":100.0,"height":1.06436559448255},"T3|T4|rT3":{"edge":3,"au":52.99957540051,"bp":54.5126879327154,"height":1.95942282533735},"T3|T4|rT3|sT4":{"edge":4,"au":97.1384952415817,"bp":91.3430067225746,"height":2.32926720140827},"Cilengitide|sT3":{"edge":5,"au":74.0801273685442,"bp":40.7575752928851,"height":3.45930560942155},"Cilengitide|TETRAC|TRIAC|sT3":{"edge":6,"au":76.2441311483133,"bp":43.0102151820789,"height":3.84246133347516},"Cilengitide|T3|T4|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":7,"au":100.0,"bp":100.0,"height":6.29209721553412},"Cilengitide|T3|T4|T4AM|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":8,"au":100.0,"bp":100.0,"height":13.6974055327775}},"N. vectensis":{"TETRAC|TRIAC":{"edge":1,"au":99.9406275338869,"bp":99.8452457659395,"height":0.901146091160764},"T3|T4":{"edge":2,"au":52.9678406674669,"bp":56.9304868135404,"height":1.47895902451204},"T3|T4|rT3":{"edge":3,"au":85.6782293619994,"bp":60.3269244256964,"height":1.85197392956753},"Cilengitide|sT4":{"edge":4,"au":79.8590988101332,"bp":43.3064107945383,"height":1.8672462834215},"Cilengitide|sT3|sT4":{"edge":5,"au":84.0919672657834,"bp":32.1201692768054,"height":2.38330820163606},"Cilengitide|T3|T4|rT3|sT3|sT4":{"edge":6,"au":66.4364742492733,"bp":44.2904069111773,"height":3.6134804144832},"Cilengitide|T3|T4|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":7,"au":93.0983341464357,"bp":98.5997340077439,"height":5.50123362693942},"Cilengitide|T3|T4|T4AM|TETRAC|TRIAC|rT3|sT3|sT4":{"edge":8,"au":100.0,"bp":100.0,"height":10.9192492177881}}};
   const $ = q => document.querySelector(q);
   const all = q => [...document.querySelectorAll(q)];
   const NS='http://www.w3.org/2000/svg';
@@ -172,17 +173,18 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
   function clusterSegments(z,items,xPositions,yBottom,yTop){
     const n=items.length,heights=z.map(r=>r[2]),maxH=Math.max(...heights)||1;
     const nodes=Array(n+z.length);
-    for(let i=0;i<n;i++)nodes[i]={x:xPositions.get(i),y:yBottom};
+    for(let i=0;i<n;i++)nodes[i]={x:xPositions.get(i),y:yBottom,members:[items[i]],height:0};
     const lines=[];
     for(let i=0;i<z.length;i++){
       const [a,b,h]=z[i],v1=nodes[a],v2=nodes[b];
       const y=yBottom-(h/maxH)*(yBottom-yTop);
       if(!v1||!v2||!Number.isFinite(v1.x)||!Number.isFinite(v2.x))continue;
       lines.push([v1.x,v1.y,v1.x,y],[v2.x,v2.y,v2.x,y],[v1.x,y,v2.x,y]);
-      nodes[n+i]={x:(v1.x+v2.x)/2,y};
+      nodes[n+i]={x:(v1.x+v2.x)/2,y,members:[...v1.members,...v2.members].sort(),height:h};
     }
-    return lines;
+    return {lines,nodes:nodes.slice(n)};
   }
+
   function getSpec(){
     const sp=$('#species').value, ordering=$('#ordering').value,filter=$('#search').value.trim().toLowerCase();
     let rows,cols=[],values,min,max,tree,kind,metadata={};
@@ -256,16 +258,59 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
     $('#speciesControl').style.display=figure==='16'?'none':'';
     $('#scaleControl').style.display=figure==='14'?'':'none';
     $('#searchControl').style.display=figure==='15'?'none':'';
+    $('#auNotice').style.display=figure==='14'&&spec.tree?'':'none';
     $('#ordering').options[2].textContent=figure==='15'?'Mean correlation: highest first':'Affinity: strongest first';
   }
-  function drawTree(svg,spec,left,cellW){
+  function drawTree(svg,spec,left,cellW,top){
     if(!spec.tree||spec.cols.length!==9)return;
     const origIds=spec.cols.map(c=>LIGANDS.indexOf(c.key));
     const positions=new Map(origIds.map((id,i)=>[id,left+i*cellW+cellW/2]));
-    const lines=clusterSegments(spec.tree,LIGANDS,positions,90,17);
+    const yBottom=top-55,yTop=figure==='14'?29:17;
+    const tree=clusterSegments(spec.tree,LIGANDS,positions,yBottom,yTop);
     const g=elem('g',{'aria-hidden':true});
-    for(const [x1,y1,x2,y2] of lines){g.appendChild(elem('line',{x1,y1,x2,y2,stroke:figure==='16'?'#a6b1c1':MODEL_COLORS[spec.metadata.sp],'stroke-width':1.5,opacity:.85}));}svg.appendChild(g);
+    for(const [x1,y1,x2,y2] of tree.lines){g.appendChild(elem('line',{x1,y1,x2,y2,stroke:figure==='16'?'#a6b1c1':MODEL_COLORS[spec.metadata.sp],'stroke-width':1.5,opacity:.85}));}
+    svg.appendChild(g);
+    if(figure!=='14')return;
+    // Match support values to the actual set of member ligands at every merge.
+    // Never align AU values by raw edge number alone or by pixel position.
+    const support=AU_BOOTSTRAP[spec.metadata.sp]||{};
+    const placed=[];
+    const labels=elem('g',{'class':'bootstrap-labels','aria-label':'Approximately unbiased bootstrap cluster support (AU percent)'});
+    for(const node of tree.nodes){
+      const key=node.members.join('|');
+      const value=support[key];
+      if(!value)throw new Error(`Missing bootstrap node for ${spec.metadata.sp}: ${key}`);
+      if(Math.abs(value.height-node.height)>0.000001)throw new Error(`Bootstrap height mismatch for ${key}`);
+      // As in thesis Figure 14, the full-nine-ligand root remains unlabelled.
+      if(node.members.length===LIGANDS.length)continue;
+      const label=String(Math.round(value.au));
+      const w=label.length===3?34:29,h=18;
+      let x=node.x-w/2,y=node.y-h-6;
+      // For the compressed low-height merges, stagger badges rather than
+      // hiding any AU annotations or obscuring adjacent labels.
+      let attempts=0;
+      while(placed.some(b=>x<b.x+b.w+4&&x+w+4>b.x&&y<b.y+b.h+3&&y+h+3>b.y)&&attempts<8){
+        y-=21;attempts++;
+      }
+      placed.push({x,y,w,h});
+      const group=elem('g',{tabindex:0,'role':'img','aria-label':`${node.members.join(', ')}: AU ${value.au.toFixed(2)} percent, BP ${value.bp.toFixed(2)} percent`});
+      if(y+h<node.y-8){
+        group.appendChild(elem('line',{x1:node.x,y1:y+h,x2:node.x,y2:node.y-2,stroke:'#c87c86','stroke-width':0.9,'stroke-dasharray':'2 3'}));
+      }
+      group.appendChild(elem('rect',{x,y,width:w,height:h,rx:4,fill:'#fffafa',stroke:'#efcfd4','stroke-width':0.8}));
+      group.appendChild(elem('text',{x:node.x,y:y+12.6,'text-anchor':'middle',fill:'#ad324c','font-size':11.5,'font-weight':850},label));
+      group.appendChild(elem('title',{},`AU ${value.au.toFixed(2)}%; BP ${value.bp.toFixed(2)}%; ligands: ${node.members.join(', ')}`));
+      const tooltip=`<strong>AU ${value.au.toFixed(2)}% · BP ${value.bp.toFixed(2)}%</strong><br>Ligand cluster: ${escape(node.members.join(', '))}<br><span style="color:#62728a">1,000,000 bootstrap replicates per scale · AU is cluster support, not biological binding probability.</span>`;
+      group.addEventListener('mouseenter',e=>hint(e,tooltip));
+      group.addEventListener('mousemove',e=>hint(e,tooltip));
+      group.addEventListener('mouseleave',hideHint);
+      group.addEventListener('focus',()=>{const r=group.getBoundingClientRect();hint({clientX:r.x,clientY:r.y},tooltip);});
+      group.addEventListener('blur',hideHint);
+      labels.appendChild(group);
+    }
+    svg.appendChild(labels);
   }
+
   function selectCell(spec,row,col,value,tile){
     selectedId=chartCellId(row.key,col.key);
     const title=$('#cellTitle'),desc=$('#cellDescription'),score=$('#cellScore'),unit=$('#cellUnit');
@@ -294,14 +339,14 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
     if(!spec.cols.length){target.textContent='No ligand matches your search. Clear the filter to display the heatmap.';return;}
     const isCorr=figure==='15';
     const cw=isCorr?72:(figure==='16'?84:72),ch=isCorr?47:(figure==='16'?71:(spec.rows.length>18?28:36));
-    const left=figure==='14'?163:178,top=145,right=30,bottom=30;
+    const left=figure==='14'?163:178,top=figure==='14'?202:145,right=30,bottom=30;
     const W=left+cw*spec.cols.length+right,H=top+ch*spec.rows.length+bottom;
     const svg=elem('svg',{xmlns:NS,viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img','aria-label':`Figure ${figure} interactive heatmap with ${spec.rows.length} rows and ${spec.cols.length} columns`});
     const background=elem('rect',{x:left,y:top,width:cw*spec.cols.length,height:ch*spec.rows.length,fill:'#f3f5f9',rx:5});svg.appendChild(background);
-    if(spec.tree)drawTree(svg,spec,left,cw);
+    if(spec.tree)drawTree(svg,spec,left,cw,top);
     for(let j=0;j<spec.cols.length;j++){
       const x=left+j*cw+cw/2;
-      svg.appendChild(elem('text',{x,y:117,'text-anchor':'middle',fill:'#405069','font-size':12,'font-weight':750},spec.cols[j].label));
+      svg.appendChild(elem('text',{x,y:top-28,'text-anchor':'middle',fill:'#405069','font-size':12,'font-weight':750},spec.cols[j].label));
     }
     for(let i=0;i<spec.rows.length;i++){
       const y=top+i*ch;
