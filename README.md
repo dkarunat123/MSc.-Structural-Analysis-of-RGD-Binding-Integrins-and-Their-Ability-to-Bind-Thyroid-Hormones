@@ -3,15 +3,7 @@
 **MSc Bioinformatics thesis · University of Guelph · 2026**  
 Dilma Karunathilake · Heyland Lab
 
-<p>
-  <a href="https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/">
-    <img alt="Open interactive thesis results atlas" src="https://img.shields.io/badge/Open%20interactive%20thesis%20results%20atlas-Visit%20website-4F7FB8?style=for-the-badge&logo=githubpages&logoColor=white">
-  </a>
-</p>
-
 [![Preview of the interactive thesis results atlas homepage header](docs/assets/atlas-header-preview.png)](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
-
-*Preview of the interactive atlas homepage. Click the button above or the image preview to open the full site.*
 
 ## Abstract
 
