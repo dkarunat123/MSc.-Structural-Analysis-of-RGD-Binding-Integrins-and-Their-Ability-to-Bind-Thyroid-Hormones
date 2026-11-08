@@ -1,19 +1,29 @@
+[![Preview of the light pastel interactive Integrin Atlas, showing the thesis organism colours, study summary, and interactive figure explorer](docs/assets/dashboard-preview.png)](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
+
+<p align="center"><strong>PREVIEW OF THE INTERACTIVE THESIS ATLAS</strong><br>Click the image to explore the full interactive website (once GitHub Pages is enabled).</p>
+
 # Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones
 
 **MSc Bioinformatics thesis · University of Guelph · 2026**  
 **Dilma Karunathilake · Heyland Lab**
 
-[**Explore the interactive results atlas ↗**](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/) · [Download receptor-level scores](docs/data/receptor_affinities.csv) · [Read the data provenance](docs/data/validation_report.json) · [Reproduction guide](docs/README.md)
+### [Explore the interactive results atlas ↗](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
 
-### Thesis-inspired structure colours
+Explore the **48 modelled integrin heterodimers**, **9 ligands**, and **432 computational binding-affinity predictions** across three metazoan species. Switch species, inspect affinity and correlation values, and export figures or data in the full interactive atlas.
 
-![Structure model colour key: blue for human AlphaFold, grey for human crystal structures, magenta for sea urchin AlphaFold, and olive-green for sea anemone AlphaFold](docs/assets/structure-colour-key.svg)
+**Browse the results:** [Figure 14 · Receptor affinities](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/) · [Figure 15 · Ligand correlations](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/) · [Figure 16 · Cross-species profiles](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
 
-The dashboard uses a **light, pastel-tinted background with white cards**, while preserving the **original, saturated model identity colours from the structural figures in the thesis**: blue for human AlphaFold models, grey for human experimentally determined crystal references, magenta for *S. purpuratus* AlphaFold models, and olive-green for *N. vectensis* AlphaFold models. The blue, magenta, and olive-green swatches are approximate screen-matched colours from Figure 20; the crystal-reference grey is a neutral approximation based on your requested crystal-structure colour. They can be adjusted to the original PyMOL colour codes if those are available. **Figures 14–16 contain AlphaFold-based receptor data, not crystal-structure affinity panels.** Grey is reserved for crystal comparisons in the structural figures. Continuous heatmap fills retain the thesis' quantitative affinity and Spearman colour scales rather than assigning model colours to numerical values.
+*The interactive controls run in the GitHub Pages website, not directly inside this README. If the atlas link is not live yet, go to your repository's **Settings → Pages → Deploy from a branch → `main` → `/docs` → Save**.*
 
-![Heatmap of the median predicted thyroid hormone binding affinities across three species, calculated from the study's complete numerical data](docs/assets/median-affinity-preview.png)
+### A look at the results
 
-*Interactive versions of thesis Figures **14, 15 and 16** are available in the [results atlas](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/). The static image above shows cross-species medians of predicted −log₁₀(KD), clustered using Euclidean distance and complete linkage. **Higher scores imply stronger predicted binding.** Enable GitHub Pages from the `main` branch's `/docs` folder to activate the interactive site.*
+![Cross-species median thyroid hormone affinity profiles from thesis Figure 16](docs/assets/median-affinity-preview.png)
+
+*Figure 16 — median predicted −log₁₀(KD) by species and ligand. Higher scores indicate stronger **predicted** binding. The static preview is an illustration; inspect the values interactively in the atlas.*
+
+[**Download receptor-level scores (CSV)**](docs/data/receptor_affinities.csv) · [Data validation and provenance](docs/data/validation_report.json) · [Installation and reproduction guide](INSTALLATION.md)
+
+---
 
 ## Research question
 
@@ -108,6 +118,12 @@ The complete thesis also refers to `Structures/` and `Supplementary/`; please ve
 - For Figure 16, medians are calculated in **−log₁₀(KD) space**. For comparisons requiring the median *raw* KD (notably Figure 18), take the median of raw KD directly; for an even number of receptors it need not equal `10^(-median(-log10(KD)))`.
 - The 24 sea urchin and 16 sea anemone pairings are **computationally modeled candidates**, not validated physiological receptor pairings or biological replicates.
 - The AlphaFold modelling protocol supplied eight Mn²⁺ ions; their presence in models does not independently establish conserved ion occupancy. Some predicted metal–ligand distances were shorter than typical physical coordination distances, so interpreted poses are **metal-proximal predictions**, not confirmed coordination geometries.
+
+## Thesis structure colour key
+
+![Thesis structure colours: blue human AlphaFold, grey human crystal, magenta sea urchin AlphaFold, olive-green sea anemone AlphaFold](docs/assets/structure-colour-key.svg)
+
+The **original, saturated organism colours** are used for model identity in the interactive atlas. The surrounding site uses a pale blue/lavender background with white panels. Heatmap fills preserve independent *quantitative* affinity and correlation colour scales, rather than using species colours to encode numeric values. The Figure 14–16 plots are based on AlphaFold models; grey crystal-structure references are reserved for structural comparisons.
 
 ## Citation and reuse
 
