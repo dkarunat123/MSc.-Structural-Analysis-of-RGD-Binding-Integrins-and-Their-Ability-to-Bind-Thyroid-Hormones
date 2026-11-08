@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  // Version: sea-urchin-cell-numbers-v2 (2026-11-08). All 24 rows show their values.
   const D = window.THESIS_DATA;
   const SPECIES = ['H. sapiens', 'S. purpuratus', 'N. vectensis'];
   const LIGANDS = ['Cilengitide','T3','T4','TRIAC','TETRAC','sT3','sT4','rT3','T4AM'];
