@@ -21,4 +21,4 @@ Integrin αVβ3 mediates non-genomic thyroid hormone signaling, but whether this
 
 ## Citation
 
-Karunathilake, D. (2026). *Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones*. MSc thesis, University of Guelph. Advisors: Andreas Heyland and Matthew Kimber. See [`CITATION.cff`](CITATION.cff) for repository citation metadata.
+Karunathilake, D. (2026). *Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones*. MSc thesis, University of Guelph. Advisors: Andreas Heyland and Matthew Kimber.
