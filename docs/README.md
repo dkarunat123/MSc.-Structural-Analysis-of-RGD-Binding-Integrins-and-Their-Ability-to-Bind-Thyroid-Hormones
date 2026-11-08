@@ -4,7 +4,7 @@ This directory is a self-contained static site implementing interactive companio
 
 ## Visual design and scientific colour meaning
 
-The model-identity colours follow the thesis structural figures: **human AlphaFold = blue `#396EA5`**, **human crystal structures = grey `#9EA5AF`**, **sea urchin AlphaFold = magenta `#A641A6`**, and **sea anemone AlphaFold = olive-green `#6F990C`**. The three species-model colours are approximated from the supplied Figure 20 screenshot; crystal grey is a neutral approximation following the requested crystal-structure convention. These are not necessarily the original PyMOL RGB settings. Structure colours appear on labels, strips, legends and accents. **Cell fill remains a continuous quantitative map**: Figures 14/16 represent `-log10(KD)` and Figure 15 represents ρ.
+The model-identity colours are used throughout the thesis to distinguish the four model types: **human AlphaFold = blue `#396EA5`**, **human crystal structures = grey `#9EA5AF`**, **sea urchin AlphaFold = magenta `#A641A6`**, and **sea anemone AlphaFold = olive-green `#6F990C`**. The digital hex values are visual approximations of the thesis-wide colour convention, rather than verified original PyMOL RGB settings; the crystal grey is a neutral approximation. Structure colours appear on labels, strips, legends and accents. **Cell fill remains a continuous quantitative map**: Figures 14/16 represent `-log10(KD)` and Figure 15 represents ρ.
 
 Grey only identifies crystal structure controls in the structure colour key. The Figure 14-16 plots themselves use the AlphaFold model affinity data, so the dashboard does not fabricate a crystal-structure comparison.
 

@@ -6,7 +6,7 @@
   const LIGANDS = ['Cilengitide','T3','T4','TRIAC','TETRAC','sT3','sT4','rT3','T4AM'];
   const PALETTE_AFF = ['#313695','#74ADD1','#FFFFBF','#FDAE61','#A50026'];
   const PALETTE_RHO = ['#313695','#74ADD1','#FFFFBF','#F46D43','#A50026'];
-  // Structure identity from thesis Figure 20; heatmap palettes above encode numeric scores.
+  // Thesis-wide structure/model identity colours; heatmap palettes above encode numeric scores.
   const MODEL_COLORS = {'H. sapiens':'#396ea5','S. purpuratus':'#a641a6','N. vectensis':'#6f990c'};
   const MODEL_LIGHT = {'H. sapiens':'#8bc1f0','S. purpuratus':'#ec9de5','N. vectensis':'#c9df7d'};
   const $ = q => document.querySelector(q);
