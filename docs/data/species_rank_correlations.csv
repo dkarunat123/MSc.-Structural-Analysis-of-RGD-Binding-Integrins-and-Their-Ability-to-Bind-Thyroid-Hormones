@@ -1,0 +1,4 @@
+species_a,species_b,spearman_rho
+H. sapiens,S. purpuratus,0.9166666666666666
+H. sapiens,N. vectensis,0.9
+S. purpuratus,N. vectensis,0.9833333333333333

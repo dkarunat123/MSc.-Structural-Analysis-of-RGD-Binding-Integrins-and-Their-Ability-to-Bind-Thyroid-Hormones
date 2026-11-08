@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the associated MSc thesis when using the repository's research data, scripts, or figures."
+type: software
+title: "Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones: Research Code and Data"
+authors:
+  - family-names: Karunathilake
+    given-names: Dilma
+repository-code: "https://github.com/dkarunat123/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones"
+abstract: >-
+  Research code, comparative sequence analyses, protein structures, docking results,
+  and derived datasets associated with the 2026 University of Guelph MSc Bioinformatics thesis
+  on predicted thyroid hormone binding to RGD-binding integrins across three metazoan species.

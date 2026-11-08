@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+# R/RStudio
+.Rhistory
+.RData
+.Rproj.user/
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+# Derived temporary files (adjust for research workflow)
+*.tmp
+*.bak
+# Important: DO NOT glob-ignore PDB/CIF/PSE/CSV/XLSX or required outputs.

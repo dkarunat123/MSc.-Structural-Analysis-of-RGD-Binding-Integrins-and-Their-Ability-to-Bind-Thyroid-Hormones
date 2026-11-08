@@ -1,0 +1,44 @@
+{
+  "source_files": [
+    "All_Species_BindingScores.xlsx",
+    "BindingScores_StatisticalAnalysis.xlsx",
+    "Species_LigandPair_SpearmanCorrelations.csv"
+  ],
+  "n_receptors": 48,
+  "n_ligands": 9,
+  "n_predictions": 432,
+  "n_species": 3,
+  "receptor_counts": {
+    "H. sapiens": 8,
+    "S. purpuratus": 24,
+    "N. vectensis": 16
+  },
+  "max_abs_neglog10_kd_difference": 8.881784197001252e-16,
+  "n_spearman_ligand_pairs_verified": 108,
+  "max_abs_spearman_difference": 4.996003610813204e-16,
+  "species_spearman": [
+    {
+      "species_a": "H. sapiens",
+      "species_b": "S. purpuratus",
+      "rho": 0.9166666666666666
+    },
+    {
+      "species_a": "H. sapiens",
+      "species_b": "N. vectensis",
+      "rho": 0.9
+    },
+    {
+      "species_a": "S. purpuratus",
+      "species_b": "N. vectensis",
+      "rho": 0.9833333333333333
+    }
+  ],
+  "bootstrap_annotation_status": "not included: original pvclust RDS and edge tables were not uploaded; linkage recreated from the complete numeric data with Euclidean distance and complete linkage. Node AU supports not invented.",
+  "clustering_method": "SciPy hierarchical complete linkage; branch order/orientation may differ from the original R pvclust or hclust ordering",
+  "calculation_notes": [
+    "Species medians are calculated on unrounded already-transformed -log10(KD) values.",
+    "No second log transform is used.",
+    "Species pair Spearman rho is calculated over nine median ligand profiles.",
+    "Raw KD values are retained independently; median(KD) differs from transform of median(-log10 KD)."
+  ]
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Explore 432 predicted ligand-affinity scores across 48 integrin models and three metazoan species, with interactive heatmaps derived from an MSc thesis.">
+  <title>Integrin Atlas · Interactive Thesis Results</title>
+  <style>
+    :root{color-scheme:light;--bg:#f7f8fc;--surface:#ffffff;--surface2:#f3f5fa;--surface3:#e9eef6;--line:#dde4ee;--ink:#273247;--muted:#526178;--soft:#6b7890;--mint:#396ea5;--orange:#a641a6;--violet:#6f990c;--red:#bc5554;--human:#396ea5;--human-light:#8bc1f0;--crystal:#9ea5af;--crystal-light:#d0d6de;--urchin:#a641a6;--urchin-light:#ec9de5;--anemone:#6f990c;--anemone-light:#c9df7d;--active-model:var(--human);--active-model-deep:var(--human)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(ellipse 900px 470px at 88% -7%,#30437485,transparent 70%),var(--bg);color:var(--ink);line-height:1.55}
+    a{color:inherit;text-decoration:none}a:hover{color:var(--mint)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}select,input{color:var(--ink)}
+    .wrap{max-width:1460px;margin:auto;padding:0 34px}.sitebar{border-bottom:1px solid var(--line);background:#091121d1;backdrop-filter:blur(15px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.5px;font-size:19px}.logo{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:#1d3846;border:1px solid #336976;color:var(--human-light);font-size:22px}.navlinks{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:650;color:var(--muted)}.navlinks a:last-child{border:1px solid var(--line);border-radius:9px;padding:10px 15px;color:var(--ink)}
+    .hero{display:flex;align-items:center;justify-content:space-between;gap:42px;padding-top:65px;padding-bottom:34px}.heroCopy{max-width:760px}.eyebrow{display:flex;align-items:center;gap:9px;text-transform:uppercase;font-size:11px;font-weight:850;letter-spacing:2.3px;color:var(--human-light)}.eyebrow:before{content:"";background:linear-gradient(90deg,var(--human),var(--urchin),var(--anemone));width:18px;height:2px}h1{font-size:clamp(37px,4.5vw,62px);line-height:1.08;letter-spacing:-2.5px;margin:19px 0 20px;font-weight:820}h1 span{background:linear-gradient(95deg,#8bc1f0 0%,#e8a0df 55%,#c9df7d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:16px;max-width:700px;color:var(--muted);margin:0}.heroTag{min-width:250px;max-width:295px;border:1px solid #3b5170;background:linear-gradient(135deg,#1a2c46,#111a2a);border-radius:14px;padding:23px;box-shadow:0 10px 45px #0003}.heroTag small{color:var(--mint);letter-spacing:1.8px;font-size:10px;font-weight:750;text-transform:uppercase}.heroTag strong{display:block;margin-top:8px;font-size:18px;line-height:1.45}.heroTag p{margin-top:9px;font-size:12px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-bottom:42px}.stat{border:1px solid var(--line);border-radius:14px;background:#111b2ab8;padding:17px 22px;position:relative;overflow:hidden}.stat:before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(180deg,var(--human) 0%,var(--urchin) 52%,var(--anemone) 100%)}.stat .num{font-size:31px;line-height:1.1;letter-spacing:-1px;font-weight:800}.stat .lbl{font-size:12px;color:var(--muted);margin-top:7px}
+    .main{display:grid;grid-template-columns:264px minmax(0,1fr);gap:18px;align-items:start;padding-bottom:62px}.sidebar,.panel,.inspector,.bottomnote{border:1px solid var(--line);border-radius:15px;background:var(--surface);box-shadow:0 6px 25px #0001}.sidebar{padding:22px;position:sticky;top:18px}.smHead{color:var(--soft);font-weight:850;text-transform:uppercase;font-size:10px;letter-spacing:1.65px;margin-bottom:13px}.figNav{display:grid;gap:9px}.figBtn{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;padding:12px;background:var(--surface2);border:1px solid transparent;border-radius:10px;color:var(--muted)}.figBtn .circle{display:inline-grid;place-items:center;width:33px;height:33px;border:1px solid #3c4d68;border-radius:8px;font-size:12px;font-weight:850;color:#a9bbd2}.figBtn b{display:block;font-size:13px;color:var(--ink)}.figBtn small{display:block;font-size:11px;color:var(--muted);font-weight:400}.figBtn.selected{border-color:var(--active-model-deep);background:#213148}.figBtn.selected .circle{background:var(--active-model);border-color:var(--active-model);color:#0c2027}.control{margin-top:16px}.control label{display:block;font-size:11px;font-weight:800;color:#b8c6df;margin-bottom:7px}.control select,.control input[type=search]{width:100%;background:#0d172a;border:1px solid #344560;border-radius:8px;color:var(--ink);padding:10px 12px;font-size:13px}.control input::placeholder{color:#637894}.control .check{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;font-weight:500;line-height:1.5}.control .check input{accent-color:var(--mint);margin-top:2px}.rule{border:0;border-top:1px solid var(--line);margin:22px 0 4px}.sidebarfoot{font-size:11px;color:var(--muted);line-height:1.7;margin-top:22px}
+    .content{min-width:0;display:grid;gap:15px}.panel{overflow:hidden}.panelhead{padding:26px 28px 20px;border-bottom:1px solid var(--line)}.panelhead .kicker{color:var(--active-model);font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:800}.panelhead h2{font-size:25px;margin:9px 0 8px;letter-spacing:-.65px}.panelhead p{margin:0;color:var(--muted);font-size:13px;max-width:850px;line-height:1.65}.paneltop{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:16px 28px;border-bottom:1px solid var(--line)}.method{font-size:12px;color:var(--muted)}.method b{font-weight:800;color:#deecff}.actions{display:flex;flex-wrap:wrap;gap:8px}.action{background:#1b2a43;border:1px solid #38516d;border-radius:9px;color:var(--ink);font-size:12px;font-weight:750;padding:10px 13px}.action:hover{background:#253955}.action.primary{background:#1d3755;color:#d3eaff;border-color:var(--active-model-deep)}.vizArea{padding:21px 20px 8px;overflow:auto;scrollbar-color:#4d6080 transparent;min-height:280px}.vizArea svg{display:block;max-width:none}.axis-label{fill:#cedcf0;font-size:12px;font-weight:650}.axis-muted{fill:#849bb8;font-size:10px}.value{font-size:11px;font-weight:750;pointer-events:none}.tile{cursor:pointer;stroke:#162239;stroke-width:2px;transition:stroke-width .08s}.tile:hover,.tile:focus{stroke:#ffffff;stroke-width:3px;outline:0}.branches{fill:none;stroke:#8ea4c1;stroke-width:1.4;stroke-linejoin:round}.selectedtile{stroke:var(--active-model);stroke-width:3.5px}.legendrow{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:0 26px 23px;color:var(--muted);font-size:11px}.gradient{height:9px;border-radius:6px;background:linear-gradient(90deg,#313695,#74add1,#ffffbf,#fdae61,#a50026);width:205px}.gradient.rho{background:linear-gradient(90deg,#313695,#74add1,#ffffbf,#f46d43,#a50026)}.legend{display:flex;align-items:center;gap:12px}.legend span{font-variant-numeric:tabular-nums}
+    .inspector{padding:23px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:start}.inspector h3{font-size:13px;margin:0 0 8px;color:var(--active-model);text-transform:uppercase;letter-spacing:1.2px}.inspector .big{font-size:18px;font-weight:800;margin-bottom:7px;line-height:1.35}.inspector p{margin:0;color:var(--muted);font-size:12px}.scorepill{border:1px solid #3c556a;background:#182a3c;padding:14px 16px;border-radius:10px;min-width:125px;text-align:center}.scorepill strong{font-size:25px;font-variant-numeric:tabular-nums}.scorepill small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}.bottomnote{padding:20px 26px;color:var(--muted);font-size:12px;line-height:1.7}.bottomnote strong{color:var(--ink)}.bottomnote a{color:var(--human-light);text-decoration:underline;text-underline-offset:3px}
+    .tooltip{position:fixed;z-index:20;display:none;max-width:330px;pointer-events:none;background:#0b192b;border:1px solid var(--active-model-deep);border-radius:10px;padding:12px 15px;box-shadow:0 10px 30px #0009;color:var(--ink);font-size:12px;line-height:1.6}.tooltip strong{color:var(--active-model)}
+    .footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--soft);font-size:11px}.footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+
+    /* Thesis Figure 20 model identity: sampled approximations; never use these hues as affinity scales. */
+    .sitebar{border-top:4px solid transparent;border-image:linear-gradient(90deg,var(--human) 0%,var(--human) 28%,var(--crystal) 28%,var(--crystal) 43%,var(--urchin) 43%,var(--urchin) 72%,var(--anemone) 72%) 1}
+    .modelKey{margin-top:1px;margin-bottom:28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:13px 20px;border:1px solid var(--line);border-radius:13px;background:#111b2bc9}
+    .keyHeading{color:var(--soft);font-size:10px;letter-spacing:1.1px;text-transform:uppercase;font-weight:850;margin-right:7px}
+    .keyItem{display:inline-flex;gap:8px;align-items:center;color:var(--ink);font-size:12px;font-weight:700;white-space:nowrap}
+    .keyItem small{font-weight:500;color:var(--muted);font-size:11px}
+    .swatch{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none;background:var(--swatch);box-shadow:0 0 0 3px color-mix(in srgb,var(--swatch) 20%,transparent)}
+    .swatch.human{--swatch:var(--human-light)}.swatch.crystal{--swatch:var(--crystal-light)}.swatch.urchin{--swatch:var(--urchin-light)}.swatch.anemone{--swatch:var(--anemone-light)}
+    .keyNote{font-size:10px;color:var(--soft);margin-left:auto}
+    .sidebarSpecies{border:1px solid var(--line);background:#101c2d;border-radius:11px;padding:12px;margin-top:20px;display:grid;gap:9px}
+    .sidebarSpecies .keyItem{font-size:11px}
+    .sidebarSpecies strong{font-size:11px;color:var(--muted);letter-spacing:.4px}
+    .species-status{display:inline-flex;align-items:center;gap:10px;margin-bottom:7px;font-size:11px;color:var(--active-model);font-weight:800;letter-spacing:.25px}
+    .species-status:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--active-model);box-shadow:0 0 0 4px color-mix(in srgb,var(--active-model) 16%,transparent)}
+    .panelhead{border-top:3px solid var(--active-model-deep)}
+    .axis-model{stroke:var(--active-model);fill:var(--active-model)}
+    .scorepill{border-color:var(--active-model-deep)}
+    .scienceNote{border-left:3px solid var(--active-model-deep);padding-left:12px;color:var(--muted)}
+    @media(max-width:650px){.modelKey{align-items:flex-start;gap:10px;padding:13px 15px}.keyHeading{width:100%}.keyNote{margin-left:0}.keyItem{font-size:11px}}
+    @media(max-width:1000px){.heroTag{display:none}.main{grid-template-columns:1fr}.sidebar{position:static}.sidebar .figNav{grid-template-columns:repeat(3,1fr)}.sidebar .figBtn{align-items:flex-start}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:0 16px}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.wrap{padding:0 15px}.nav{height:64px}.navlinks a:not(:last-child){display:none}.brand{font-size:15px}.hero{padding-top:40px}.stats{gap:8px}.stat{padding:13px}.stat .num{font-size:25px}.sidebar{padding:15px}.sidebar .figNav{grid-template-columns:1fr}.figBtn{justify-content:flex-start}.controls{grid-template-columns:1fr}.panelhead{padding:19px}.panelhead h2{font-size:21px}.paneltop{padding:15px 18px}.inspector{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.navlinks a:last-child{padding:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+    /* v4 LIGHT PASTEL SITE THEME — only background/surfaces change; thesis model colours and scientific value gradients remain untouched. */
+    body{background:
+      radial-gradient(ellipse 810px 520px at 92% 2%,rgba(222,204,239,.37),transparent 72%),
+      radial-gradient(ellipse 900px 580px at 7% 9%,rgba(202,224,246,.48),transparent 74%),
+      linear-gradient(180deg,#fbfcff 0%,#f7f8fc 52%,#f8f7fb 100%);}
+    .sitebar{background:rgba(255,255,255,.91);box-shadow:0 2px 13px rgba(45,62,92,.035)}
+    .navlinks a:last-child{background:#f8faff}
+    .navlinks a:hover{color:var(--human)}
+    .logo{background:#eaf2fa;border-color:#cbddeb;color:var(--human)}
+    h1 span{background:linear-gradient(100deg,var(--human),var(--urchin) 55%,var(--anemone));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .eyebrow{color:var(--human)}
+    .heroTag{border-color:#dce4f0;background:linear-gradient(125deg,#eff5fd,#f8eff9 65%,#f5f8ee);box-shadow:0 12px 30px rgba(61,65,99,.07)}
+    .heroTag small{color:var(--human)}
+    .heroTag strong{color:var(--ink)}
+    .stat{background:rgba(255,255,255,.91);box-shadow:0 4px 17px rgba(42,66,96,.035)}
+    .sidebar,.panel,.inspector,.bottomnote{background:rgba(255,255,255,.96);box-shadow:0 7px 26px rgba(54,65,93,.055)}
+    .modelKey{background:rgba(255,255,255,.95);box-shadow:0 5px 22px rgba(54,65,93,.035)}
+    .swatch.human{--swatch:var(--human)}
+    .swatch.crystal{--swatch:var(--crystal)}
+    .swatch.urchin{--swatch:var(--urchin)}
+    .swatch.anemone{--swatch:var(--anemone)}
+    .figBtn{background:#f5f7fb;border-color:#e7ebf2}
+    .figBtn:hover{border-color:#c5d4e3;background:#edf3fa}
+    .figBtn .circle{border-color:#dce4ec;color:#5b6b83;background:#fff}
+    .figBtn.selected{border-color:color-mix(in srgb,var(--active-model-deep) 48%,#fff);background:color-mix(in srgb,var(--active-model-deep) 9%,#fff)}
+    .figBtn.selected .circle{background:var(--active-model);border-color:var(--active-model-deep);color:#fff}
+    .control label{color:#4e5e73}
+    .control select,.control input[type=search]{background:#fff;border-color:#d7dfeb;color:var(--ink)}
+    .control input::placeholder{color:#8492a4}
+    .control .check input{accent-color:var(--active-model-deep)}
+    .sidebarSpecies{background:#f6f7fb;border-color:#dfe6f0}
+    .panelhead .kicker,.species-status,.inspector h3{color:var(--active-model-deep)}
+    .method b{color:var(--ink)}
+    .action{background:#f6f8fc;border-color:#d4deea;color:#33435b}
+    .action:hover{background:#edf3fa}
+    .action.primary{background:var(--active-model-deep);border-color:var(--active-model-deep);color:#fff}
+    .action.primary:hover{filter:brightness(.92)}
+    .vizArea{scrollbar-color:#c8d3e3 transparent}
+    .tile{stroke:#f2f4f8}
+    .tile:hover,.tile:focus{stroke:#273247;stroke-width:3px}
+    .selectedtile{stroke:var(--active-model-deep)}
+    .branches{stroke:#97a5ba}
+    .scorepill{background:color-mix(in srgb,var(--active-model-deep) 7%,#fff);border-color:color-mix(in srgb,var(--active-model-deep) 30%,#fff)}
+    .bottomnote a{color:var(--human)}
+    .tooltip{background:#fff;border-color:var(--active-model-deep);color:var(--ink);box-shadow:0 12px 32px rgba(46,56,73,.19)}
+    .tooltip strong{color:var(--active-model-deep)}
+    .legendrow{color:#526178}
+  </style>
+</head>
+<body>
+  <header class="sitebar"><div class="wrap nav"><a class="brand" href="#top" aria-label="Integrin Atlas home"><span class="logo" aria-hidden="true">⌬</span><span>Integrin Atlas <span style="color:var(--soft);font-weight:500">/ Thesis data</span></span></a><nav class="navlinks" aria-label="External links"><a href="#explorer">Data explorer</a><a href="#methods">Methods & notes</a><a href="https://github.com/dkarunat123/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones" target="_blank" rel="noopener noreferrer">View repository ↗</a></nav></div></header>
+  <main id="top">
+    <section class="wrap hero"><div class="heroCopy"><div class="eyebrow">MSc bioinformatics · University of Guelph</div><h1>Exploring integrins &amp;<br><span>thyroid hormone binding</span></h1><p>Interact with predicted affinities across three metazoan species. Explore individual receptor–ligand scores, ligand correlation patterns, and species-level median profiles behind thesis Figures 14–16.</p></div><div class="heroTag"><small>Research context</small><strong>Structural compatibility across evolution</strong><p>Predicted binding is not experimental confirmation of receptor function or physiological signaling.</p></div></section>
+    <section class="wrap modelKey" aria-label="Structure model colour key"><span class="keyHeading">Thesis structure colour key</span><span class="keyItem"><i class="swatch human" aria-hidden="true"></i>Human <small>AlphaFold</small></span><span class="keyItem"><i class="swatch crystal" aria-hidden="true"></i>Human <small>crystal reference</small></span><span class="keyItem"><i class="swatch urchin" aria-hidden="true"></i>Sea urchin <small>AlphaFold</small></span><span class="keyItem"><i class="swatch anemone" aria-hidden="true"></i>Sea anemone <small>AlphaFold</small></span><span class="keyNote">Model identity only · not the heatmap value scale</span></section>
+    <section class="wrap stats" aria-label="Study statistics"><div class="stat"><div class="num">48</div><div class="lbl">Integrin heterodimer models</div></div><div class="stat"><div class="num">9</div><div class="lbl">Docked ligands per model</div></div><div class="stat"><div class="num">432</div><div class="lbl">Predicted affinities</div></div><div class="stat"><div class="num">3</div><div class="lbl">Metazoan species</div></div></section>
+    <section class="wrap main" id="explorer">
+      <aside class="sidebar" aria-label="Visualization controls">
+        <div class="smHead">Choose a result</div><div class="figNav">
+          <button type="button" class="figBtn selected" data-figure="14" aria-pressed="true"><span class="circle">14</span><span><b>Binding affinities</b><small>Receptor × ligand</small></span></button>
+          <button type="button" class="figBtn" data-figure="15" aria-pressed="false"><span class="circle">15</span><span><b>Ligand similarities</b><small>Spearman correlations</small></span></button>
+          <button type="button" class="figBtn" data-figure="16" aria-pressed="false"><span class="circle">16</span><span><b>Species profiles</b><small>Median affinities</small></span></button>
+        </div>
+        <hr class="rule"><div class="smHead" style="margin-top:22px">Customize the figure</div>
+        <div class="controls">
+          <div class="control" id="speciesControl"><label for="species">Species</label><select id="species"><option value="H. sapiens">Homo sapiens</option><option value="S. purpuratus">Strongylocentrotus purpuratus</option><option value="N. vectensis">Nematostella vectensis</option></select></div>
+          <div class="control" id="orderControl"><label for="ordering">Display order</label><select id="ordering"><option value="cluster">Hierarchical clustering</option><option value="alpha">Alphabetical</option><option value="strength">Affinity: strongest first</option></select></div>
+          <div class="control" id="searchControl"><label for="search">Find a ligand</label><input type="search" id="search" placeholder="e.g. TETRAC" autocomplete="off"></div>
+          <div class="control" id="scaleControl"><label class="check"><input type="checkbox" id="sharedScale"> Use a shared colour scale across all three species (Figure 14 only)</label></div>
+        </div>
+        <div class="sidebarSpecies"><strong>Structure/model colours</strong><span class="keyItem"><i class="swatch human"></i>Human · AlphaFold</span><span class="keyItem"><i class="swatch crystal"></i>Human · crystal structure</span><span class="keyItem"><i class="swatch urchin"></i>Sea urchin · AlphaFold</span><span class="keyItem"><i class="swatch anemone"></i>Sea anemone · AlphaFold</span></div><p class="sidebarfoot">Structure colours mark model identity; crystal controls are not included in Figures 14–16. Heatmap <em>fills</em> encode quantitative values.</p><p class="sidebarfoot">Colours reflect predicted −log₁₀(K<sub>D</sub>) or Spearman ρ. Click a cell to inspect the exact numerical result. No biological experiment is implied.</p>
+      </aside>
+      <div class="content">
+        <section class="panel"><div class="panelhead"><div class="species-status" id="modelContext">Human · AlphaFold model</div><div class="kicker" id="figureId">Figure 14 · interactive exploration</div><h2 id="figureTitle">Predicted receptor–ligand affinities</h2><p id="figureDescription">Individual heterodimer scores calculated from your docking pipeline. Higher −log₁₀(KD) corresponds to a lower predicted dissociation constant.</p></div>
+          <div class="paneltop"><div class="method" id="method">48 receptor models · 9 ligands · Euclidean / complete linkage</div><div class="actions"><button type="button" class="action" id="exportSvg">Export SVG</button><button type="button" class="action primary" id="exportCsv">Download current CSV ↧</button></div></div>
+          <div class="vizArea" id="vizArea" aria-live="polite"><div id="chart" role="region" aria-label="Heatmap visualization"></div></div>
+          <div class="legendrow"><div id="legendDescription">Predicted −log₁₀(KD) · higher = stronger predicted binding</div><div class="legend"><span id="legendMin">4.50</span><div class="gradient" id="gradient"></div><span id="legendMax">10.60</span></div></div>
+        </section>
+        <section class="inspector" aria-live="polite"><div><h3>Selected cell</h3><div class="big" id="cellTitle">Choose any cell to examine its score</div><p id="cellDescription">Move your cursor over a heatmap cell or click to examine a ligand–integrin interaction.</p></div><div class="scorepill"><strong id="cellScore">—</strong><small id="cellUnit">−log₁₀(KD)</small></div></section>
+        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours follow thesis Figure 20 (and structural benchmarking figures); heatmap gradients are unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 − ρ)/complete linkage for Figure 15. <strong>Original Figure 14 AU bootstrap labels are not shown</strong> because the corresponding saved <code>pvclust</code> objects and edge tables were not provided. Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><span>© 2026 Dilma Karunathilake · University of Guelph · MSc Bioinformatics</span><span>HADDOCK 2.4 · AlphaFold 3 · PRODIGY-LIG 1.1.4 · Predictions, not observations</span></div></footer>
+  <div id="tooltip" class="tooltip" role="tooltip"></div>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
