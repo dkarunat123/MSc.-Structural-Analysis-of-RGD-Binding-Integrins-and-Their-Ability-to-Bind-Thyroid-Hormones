@@ -188,7 +188,9 @@
         rect.addEventListener('click',()=>selectCell(spec,r,c,v,rect));
         rect.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectCell(spec,r,c,v,rect);}});
         svg.appendChild(rect);
-        if(ch>=34||isCorr){svg.appendChild(elem('text',{x:x+cw/2,y:y+ch/2+4,'text-anchor':'middle',fill:inkOn(base),'font-size':ch<=38?10:12,'font-weight':780,'pointer-events':'none'},v.toFixed(2)));}
+        // Display numerical labels for every species, including the 24-row sea urchin heatmap.
+        // Smaller cells use a slightly smaller font rather than hiding their values.
+        svg.appendChild(elem('text',{x:x+cw/2,y:y+ch/2+4,'text-anchor':'middle',fill:inkOn(base),'font-size':ch<=30?9:ch<=38?10:12,'font-weight':780,'pointer-events':'none'},v.toFixed(2)));
       }
     }
     target.appendChild(svg);
