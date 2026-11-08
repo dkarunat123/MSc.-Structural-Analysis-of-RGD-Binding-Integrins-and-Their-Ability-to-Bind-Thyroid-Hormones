@@ -89,10 +89,27 @@
     .tooltip{background:#fff;border-color:var(--active-model-deep);color:var(--ink);box-shadow:0 12px 32px rgba(46,56,73,.19)}
     .tooltip strong{color:var(--active-model-deep)}
     .legendrow{color:#526178}
+
+    /* Figure-specific methods and downloadable data, with scientific content kept compact. */
+    .figure-construction{padding:29px 30px 23px;font-size:13px;line-height:1.65}
+    .figure-construction h2{font-size:21px;letter-spacing:-.35px;line-height:1.3;margin:0 0 8px;color:var(--ink)}
+    .construction-intro{margin:0;color:var(--muted);max-width:900px}
+    .construction-list{margin-top:18px}
+    .construction-item{display:grid;grid-template-columns:43px minmax(0,1fr);gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+    .construction-item:last-child{padding-bottom:13px}
+    .figure-index{width:39px;height:39px;display:grid;place-items:center;border-radius:10px;border:1px solid #dce5f0;background:#f0f4fa;color:#3d526d;font-size:14px;font-weight:850}
+    .construction-item h3{font-size:15px;line-height:1.35;letter-spacing:-.2px;margin:0 0 7px;color:var(--ink)}
+    .construction-item p{margin:0;max-width:900px;color:var(--muted)}
+    .resource-links{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:11px}
+    .figure-construction .resource-links a{display:inline-flex;align-items:center;padding:6px 10px;border:1px solid #dce7f3;border-radius:8px;background:#f6f9fd;color:var(--human);font-size:12px;font-weight:700;text-decoration:none}
+    .figure-construction .resource-links a:hover{background:#e9f1fa;border-color:#afc7e1;color:#245a91}
+    .methods-footnote{margin:9px 0 0;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    .figure-construction .methods-footnote a{text-underline-offset:3px;color:var(--human)}
+    @media(max-width:650px){.figure-construction{padding:20px 17px}.construction-item{grid-template-columns:36px minmax(0,1fr);gap:11px;padding:18px 0}.figure-index{width:33px;height:33px}.construction-item h3{font-size:14px}}
   </style>
 </head>
 <body>
-  <header class="sitebar"><div class="wrap nav"><a class="brand" href="#top" aria-label="Integrin Atlas home"><span class="logo" aria-hidden="true">⌬</span><span>Integrin Atlas <span style="color:var(--soft);font-weight:500">/ Thesis data</span></span></a><nav class="navlinks" aria-label="External links"><a href="#explorer">Data explorer</a><a href="#methods">Methods & notes</a><a href="https://github.com/dkarunat123/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones" target="_blank" rel="noopener noreferrer">View repository ↗</a></nav></div></header>
+  <header class="sitebar"><div class="wrap nav"><a class="brand" href="#top" aria-label="Integrin Atlas home"><span class="logo" aria-hidden="true">⌬</span><span>Integrin Atlas <span style="color:var(--soft);font-weight:500">/ Thesis data</span></span></a><nav class="navlinks" aria-label="External links"><a href="#explorer">Data explorer</a><a href="#methods">Figure methods</a><a href="https://github.com/dkarunat123/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones" target="_blank" rel="noopener noreferrer">View repository ↗</a></nav></div></header>
   <main id="top">
     <section class="wrap hero"><div class="heroCopy"><div class="eyebrow">MSc bioinformatics · University of Guelph</div><h1>Exploring integrins &amp;<br><span>thyroid hormone binding</span></h1><p>Interact with predicted affinities across three metazoan species. Explore individual receptor-ligand scores, ligand correlation patterns, and species-level median profiles behind thesis Figures 14-16.</p></div><div class="heroTag"><small>Research context</small><strong>Structural compatibility across evolution</strong><p>Predicted binding is not experimental confirmation of receptor function or physiological signaling.</p></div></section>
     <section class="wrap stats" aria-label="Study statistics"><div class="stat"><div class="num">48</div><div class="lbl">Integrin heterodimer models</div></div><div class="stat"><div class="num">9</div><div class="lbl">Docked ligands per model</div></div><div class="stat"><div class="num">432</div><div class="lbl">Predicted affinities</div></div><div class="stat"><div class="num">3</div><div class="lbl">Metazoan species</div></div></section>
@@ -119,7 +136,50 @@
           <div class="legendrow"><div id="legendDescription">Predicted -log₁₀(KD) · higher = stronger predicted binding</div><div class="legend"><span id="legendMin">4.50</span><div class="gradient" id="gradient"></div><span id="legendMax">10.60</span></div></div>
         </section>
         <section class="inspector" aria-live="polite"><div><h3>Selected cell</h3><div class="big" id="cellTitle">Choose any cell to examine its score</div><p id="cellDescription">Move your cursor over a heatmap cell or click to examine a ligand-integrin interaction.</p></div><div class="scorepill"><strong id="cellScore">-</strong><small id="cellUnit">-log₁₀(KD)</small></div></section>
-        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours are used throughout the thesis to distinguish human AlphaFold models, human experimental structure references, sea urchin AlphaFold models and sea anemone AlphaFold models. Heatmap gradients remain separate and unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 - ρ)/complete linkage for Figure 15. <strong>Figure 14 AU support values are drawn from the original saved 1,000,000-replicate <code>pvclust</code> results and validated against the exported branch membership, AU/BP tables, and original Figure 14 PDFs. The root node is unlabelled, as in the thesis.</strong> Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/figure14_bootstrap_support.csv">Figure 14 AU/BP bootstrap data</a> · <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
+        <section class="bottomnote figure-construction" id="methods" aria-labelledby="figure-construction-title">
+          <h2 id="figure-construction-title">Data &amp; figure construction</h2>
+          <p class="construction-intro">These interactive figures were built from predicted integrin-ligand binding affinities and statistical analyses performed in R. Explore how each figure was constructed and access the data behind it.</p>
+
+          <div class="construction-list">
+            <div class="construction-item">
+              <div class="figure-index" aria-hidden="true">14</div>
+              <div>
+                <h3>Receptor-ligand binding affinities</h3>
+                <p>Predicted affinities were expressed as -log<sub>10</sub>(KD) and arranged into a receptor-by-ligand heatmap for each species. Receptors and ligands were grouped using Euclidean distance and complete-linkage clustering. AU bootstrap support from the original <code>pvclust</code> analysis is shown on the ligand dendrograms.</p>
+                <div class="resource-links">
+                  <a href="data/receptor_affinities.csv" download>Binding-affinity data</a>
+                  <a href="data/figure14_bootstrap_support.csv" download>AU bootstrap results</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="construction-item">
+              <div class="figure-index" aria-hidden="true">15</div>
+              <div>
+                <h3>Ligand-binding profile correlations</h3>
+                <p>Within each species, Spearman rank correlations were calculated between pairs of ligand-affinity profiles across the integrin models. The resulting correlation matrices were displayed as heatmaps and clustered using a distance of 1 - rho and complete linkage.</p>
+                <div class="resource-links">
+                  <a href="data/figure15_H_sapiens_rho.csv" download>Human correlations</a>
+                  <a href="data/figure15_S_purpuratus_rho.csv" download>Sea urchin correlations</a>
+                  <a href="data/figure15_N_vectensis_rho.csv" download>Sea anemone correlations</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="construction-item">
+              <div class="figure-index" aria-hidden="true">16</div>
+              <div>
+                <h3>Cross-species ligand-affinity profiles</h3>
+                <p>For each ligand, median predicted -log<sub>10</sub>(KD) values were calculated across the integrin models within each species. Species and ligand profiles were clustered using Euclidean distance and complete linkage, and the similarity of species-level ligand rankings was assessed with Spearman correlations.</p>
+                <div class="resource-links">
+                  <a href="data/species_medians.csv" download>Species median affinities</a>
+                  <a href="data/species_rank_correlations.csv" download>Cross-species correlations</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="methods-footnote">All affinities are computational predictions, not experimental measurements or confirmation of receptor function. <a href="README.md">Detailed methods</a> and <a href="data/validation_report.json">data validation</a> are available for further reference.</p>
+        </section>
       </div>
     </section>
   </main>
