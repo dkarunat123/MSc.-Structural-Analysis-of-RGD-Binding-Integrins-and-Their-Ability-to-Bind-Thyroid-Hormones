@@ -1,5 +1,3 @@
-[![Preview of the light pastel interactive Integrin Atlas, showing the thesis organism colours, study summary, and interactive figure explorer](docs/assets/dashboard-preview.png)](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
-
 <p align="center"><strong>PREVIEW OF THE INTERACTIVE THESIS ATLAS</strong><br>Click the image to explore the full interactive website (once GitHub Pages is enabled).</p>
 
 # Comparative Structural Analysis of RGD-Binding Integrins and Their Ability to Bind Thyroid Hormones
