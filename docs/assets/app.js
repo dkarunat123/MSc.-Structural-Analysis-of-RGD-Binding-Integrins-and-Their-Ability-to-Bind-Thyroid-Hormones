@@ -100,15 +100,15 @@
     $('#figureId').textContent=`Figure ${figure} · interactive exploration`;
     if(figure==='14'){
       $('#figureTitle').textContent=`${nice} integrin binding-affinity profiles`;
-      $('#figureDescription').textContent='Predicted −log₁₀(KD) values for nine ligands across individual integrin models. Default clustering uses Euclidean distance and complete linkage; each species has an independent colour scale, as in the thesis.';
+      $('#figureDescription').textContent='Predicted -log₁₀(KD) values for nine ligands across individual integrin models. Default clustering uses Euclidean distance and complete linkage; each species has an independent colour scale, as in the thesis.';
       $('#method').innerHTML=`<b>${spec.rows.length} modeled receptors</b> × ${spec.cols.length} ligands · Euclidean / complete linkage`;
     }else if(figure==='15'){
-      $('#figureTitle').textContent=`${nice} ligand–ligand similarities`;
+      $('#figureTitle').textContent=`${nice} ligand-ligand similarities`;
       $('#figureDescription').textContent='Pairwise Spearman ρ values compare how two ligands rank receptor models within the selected species. These are not correlations of measurements from independent animals.';
-      $('#method').innerHTML=`<b>9 × 9 correlations</b> · cluster distance 1 − ρ · complete linkage`;
+      $('#method').innerHTML=`<b>9 × 9 correlations</b> · cluster distance 1 - ρ · complete linkage`;
     }else{
       $('#figureTitle').textContent='Cross-species median ligand-affinity profiles';
-      $('#figureDescription').textContent='Each cell is the median predicted −log₁₀(KD) across the complete receptor repertoire modeled for that species (human 8, sea urchin 24, sea anemone 16).';
+      $('#figureDescription').textContent='Each cell is the median predicted -log₁₀(KD) across the complete receptor repertoire modeled for that species (human 8, sea urchin 24, sea anemone 16).';
       $('#method').innerHTML='<b>3 species × 9 ligands</b> · unstandardized medians · Euclidean / complete linkage';
     }
     // Model identity is separate from the continuous affinity/correlation colour scale.
@@ -118,7 +118,7 @@
     $('#modelContext').textContent = figure==='16' ? 'All three species · AlphaFold models' : (nice + ' · AlphaFold model');
     $('#legendMin').textContent=spec.min.toFixed(2);$('#legendMax').textContent=spec.max.toFixed(2);
     $('#gradient').classList.toggle('rho',spec.kind==='rho');
-    $('#legendDescription').textContent=spec.kind==='rho'?'Spearman ρ · −1 opposite ranks; +1 matching ranks':'Predicted −log₁₀(KD) · higher = stronger predicted binding';
+    $('#legendDescription').textContent=spec.kind==='rho'?'Spearman ρ · -1 opposite ranks; +1 matching ranks':'Predicted -log₁₀(KD) · higher = stronger predicted binding';
     $('#speciesControl').style.display=figure==='16'?'none':'';
     $('#scaleControl').style.display=figure==='14'?'':'none';
     $('#searchControl').style.display=figure==='15'?'none':'';
@@ -139,7 +139,7 @@
       const ent=recIndex.get(`${spec.metadata.sp}|${row.key}|${col.key}`);
       title.textContent=`${ent.receptor_label} × ${col.key} · ${spec.metadata.sp}`;
       desc.textContent=`Computational model ${ent.receptor}; predicted KD = ${ent.kd_m.toExponential(3)} M. Subunits ${ent.alpha_subunit} + ${ent.beta_subunit}; docking prediction, not a measured equilibrium constant.`;
-      score.textContent=value.toFixed(3);unit.textContent='predicted −log₁₀(KD)';
+      score.textContent=value.toFixed(3);unit.textContent='predicted -log₁₀(KD)';
     }else if(figure==='15'){
       title.textContent=`${row.key} ↔ ${col.key} · ${spec.metadata.sp}`;
       desc.textContent=`Spearman rank correlation across ${D.clusters[spec.metadata.sp].figure14.row_ids.length} modelled receptors. A positive value indicates similar receptor rank ordering for these ligands; it does not measure agreement of absolute affinity magnitudes.`;
@@ -147,8 +147,8 @@
     }else{
       const ent=medianIndex.get(`${row.key}|${col.key}`);
       title.textContent=`${col.key} · ${row.key}`;
-      desc.textContent=`Median predicted affinity across ${ent.n_receptors} different computational heterodimer models in this species. The median is taken directly from the −log₁₀(KD) scores, without re-transforming raw KD.`;
-      score.textContent=value.toFixed(3);unit.textContent='median −log₁₀(KD)';
+      desc.textContent=`Median predicted affinity across ${ent.n_receptors} different computational heterodimer models in this species. The median is taken directly from the -log₁₀(KD) scores, without re-transforming raw KD.`;
+      score.textContent=value.toFixed(3);unit.textContent='median -log₁₀(KD)';
     }
     all('.tile').forEach(x=>x.setAttribute('stroke-width','2'));
     all('.tile').forEach(x=>x.classList.remove('selectedtile'));
@@ -183,8 +183,8 @@
         const rect=elem('rect',{x:x+1,y:y+1,width:cw-2,height:ch-2,rx:3,fill:base,stroke:'#f1f3f7','stroke-width':2,tabindex:0,role:'button','aria-label':`${r.label}, ${c.label}: ${v.toFixed(4)}`});
         rect.classList.add('tile');
         if(selectedId===chartCellId(r.key,c.key)){rect.classList.add('selectedtile');rect.setAttribute('stroke-width','3.5');}
-        rect.addEventListener('mouseenter',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted −log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
-        rect.addEventListener('mousemove',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted −log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
+        rect.addEventListener('mouseenter',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted -log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
+        rect.addEventListener('mousemove',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted -log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
         rect.addEventListener('mouseleave',hideHint);
         rect.addEventListener('click',()=>selectCell(spec,r,c,v,rect));
         rect.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectCell(spec,r,c,v,rect);}});

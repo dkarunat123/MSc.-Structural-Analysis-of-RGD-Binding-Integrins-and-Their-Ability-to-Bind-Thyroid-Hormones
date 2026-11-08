@@ -42,7 +42,7 @@
     @media(max-width:650px){.wrap{padding:0 15px}.nav{height:64px}.navlinks a:not(:last-child){display:none}.brand{font-size:15px}.hero{padding-top:40px}.stats{gap:8px}.stat{padding:13px}.stat .num{font-size:25px}.sidebar{padding:15px}.sidebar .figNav{grid-template-columns:1fr}.figBtn{justify-content:flex-start}.controls{grid-template-columns:1fr}.panelhead{padding:19px}.panelhead h2{font-size:21px}.paneltop{padding:15px 18px}.inspector{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.navlinks a:last-child{padding:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-    /* v4 LIGHT PASTEL SITE THEME — only background/surfaces change; thesis model colours and scientific value gradients remain untouched. */
+    /* v4 LIGHT PASTEL SITE THEME - only background/surfaces change; thesis model colours and scientific value gradients remain untouched. */
     body{background:
       radial-gradient(ellipse 810px 520px at 92% 2%,rgba(222,204,239,.37),transparent 72%),
       radial-gradient(ellipse 900px 580px at 7% 9%,rgba(202,224,246,.48),transparent 74%),
@@ -94,7 +94,7 @@
 <body>
   <header class="sitebar"><div class="wrap nav"><a class="brand" href="#top" aria-label="Integrin Atlas home"><span class="logo" aria-hidden="true">⌬</span><span>Integrin Atlas <span style="color:var(--soft);font-weight:500">/ Thesis data</span></span></a><nav class="navlinks" aria-label="External links"><a href="#explorer">Data explorer</a><a href="#methods">Methods & notes</a><a href="https://github.com/dkarunat123/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones" target="_blank" rel="noopener noreferrer">View repository ↗</a></nav></div></header>
   <main id="top">
-    <section class="wrap hero"><div class="heroCopy"><div class="eyebrow">MSc bioinformatics · University of Guelph</div><h1>Exploring integrins &amp;<br><span>thyroid hormone binding</span></h1><p>Interact with predicted affinities across three metazoan species. Explore individual receptor–ligand scores, ligand correlation patterns, and species-level median profiles behind thesis Figures 14–16.</p></div><div class="heroTag"><small>Research context</small><strong>Structural compatibility across evolution</strong><p>Predicted binding is not experimental confirmation of receptor function or physiological signaling.</p></div></section>
+    <section class="wrap hero"><div class="heroCopy"><div class="eyebrow">MSc bioinformatics · University of Guelph</div><h1>Exploring integrins &amp;<br><span>thyroid hormone binding</span></h1><p>Interact with predicted affinities across three metazoan species. Explore individual receptor-ligand scores, ligand correlation patterns, and species-level median profiles behind thesis Figures 14-16.</p></div><div class="heroTag"><small>Research context</small><strong>Structural compatibility across evolution</strong><p>Predicted binding is not experimental confirmation of receptor function or physiological signaling.</p></div></section>
     <section class="wrap modelKey" aria-label="Structure model colour key"><span class="keyHeading">Thesis structure colour key</span><span class="keyItem"><i class="swatch human" aria-hidden="true"></i>Human <small>AlphaFold</small></span><span class="keyItem"><i class="swatch crystal" aria-hidden="true"></i>Human <small>crystal reference</small></span><span class="keyItem"><i class="swatch urchin" aria-hidden="true"></i>Sea urchin <small>AlphaFold</small></span><span class="keyItem"><i class="swatch anemone" aria-hidden="true"></i>Sea anemone <small>AlphaFold</small></span><span class="keyNote">Model identity only · not the heatmap value scale</span></section>
     <section class="wrap stats" aria-label="Study statistics"><div class="stat"><div class="num">48</div><div class="lbl">Integrin heterodimer models</div></div><div class="stat"><div class="num">9</div><div class="lbl">Docked ligands per model</div></div><div class="stat"><div class="num">432</div><div class="lbl">Predicted affinities</div></div><div class="stat"><div class="num">3</div><div class="lbl">Metazoan species</div></div></section>
     <section class="wrap main" id="explorer">
@@ -111,16 +111,16 @@
           <div class="control" id="searchControl"><label for="search">Find a ligand</label><input type="search" id="search" placeholder="e.g. TETRAC" autocomplete="off"></div>
           <div class="control" id="scaleControl"><label class="check"><input type="checkbox" id="sharedScale"> Use a shared colour scale across all three species (Figure 14 only)</label></div>
         </div>
-        <div class="sidebarSpecies"><strong>Structure/model colours</strong><span class="keyItem"><i class="swatch human"></i>Human · AlphaFold</span><span class="keyItem"><i class="swatch crystal"></i>Human · crystal structure</span><span class="keyItem"><i class="swatch urchin"></i>Sea urchin · AlphaFold</span><span class="keyItem"><i class="swatch anemone"></i>Sea anemone · AlphaFold</span></div><p class="sidebarfoot">Structure colours mark model identity; crystal controls are not included in Figures 14–16. Heatmap <em>fills</em> encode quantitative values.</p><p class="sidebarfoot">Colours reflect predicted −log₁₀(K<sub>D</sub>) or Spearman ρ. Click a cell to inspect the exact numerical result. No biological experiment is implied.</p>
+        <div class="sidebarSpecies"><strong>Structure/model colours</strong><span class="keyItem"><i class="swatch human"></i>Human · AlphaFold</span><span class="keyItem"><i class="swatch crystal"></i>Human · crystal structure</span><span class="keyItem"><i class="swatch urchin"></i>Sea urchin · AlphaFold</span><span class="keyItem"><i class="swatch anemone"></i>Sea anemone · AlphaFold</span></div><p class="sidebarfoot">Structure colours mark model identity; crystal controls are not included in Figures 14-16. Heatmap <em>fills</em> encode quantitative values.</p><p class="sidebarfoot">Colours reflect predicted -log₁₀(K<sub>D</sub>) or Spearman ρ. Click a cell to inspect the exact numerical result. No biological experiment is implied.</p>
       </aside>
       <div class="content">
-        <section class="panel"><div class="panelhead"><div class="species-status" id="modelContext">Human · AlphaFold model</div><div class="kicker" id="figureId">Figure 14 · interactive exploration</div><h2 id="figureTitle">Predicted receptor–ligand affinities</h2><p id="figureDescription">Individual heterodimer scores calculated from your docking pipeline. Higher −log₁₀(KD) corresponds to a lower predicted dissociation constant.</p></div>
+        <section class="panel"><div class="panelhead"><div class="species-status" id="modelContext">Human · AlphaFold model</div><div class="kicker" id="figureId">Figure 14 · interactive exploration</div><h2 id="figureTitle">Predicted receptor-ligand affinities</h2><p id="figureDescription">Individual heterodimer scores calculated from your docking pipeline. Higher -log₁₀(KD) corresponds to a lower predicted dissociation constant.</p></div>
           <div class="paneltop"><div><div><div class="method" id="method">48 receptor models · 9 ligands · Euclidean / complete linkage</div><div id="auNotice" style="margin-top:5px;color:#a6384b;font-size:11px;font-weight:650">Red numbers = AU bootstrap support (%) · hover for exact AU/BP and cluster members</div></div></div><div class="actions"><button type="button" class="action" id="exportSvg">Export SVG</button><button type="button" class="action primary" id="exportCsv">Download current CSV ↧</button></div></div>
           <div class="vizArea" id="vizArea" aria-live="polite"><div id="chart" role="region" aria-label="Heatmap visualization"></div></div>
-          <div class="legendrow"><div id="legendDescription">Predicted −log₁₀(KD) · higher = stronger predicted binding</div><div class="legend"><span id="legendMin">4.50</span><div class="gradient" id="gradient"></div><span id="legendMax">10.60</span></div></div>
+          <div class="legendrow"><div id="legendDescription">Predicted -log₁₀(KD) · higher = stronger predicted binding</div><div class="legend"><span id="legendMin">4.50</span><div class="gradient" id="gradient"></div><span id="legendMax">10.60</span></div></div>
         </section>
-        <section class="inspector" aria-live="polite"><div><h3>Selected cell</h3><div class="big" id="cellTitle">Choose any cell to examine its score</div><p id="cellDescription">Move your cursor over a heatmap cell or click to examine a ligand–integrin interaction.</p></div><div class="scorepill"><strong id="cellScore">—</strong><small id="cellUnit">−log₁₀(KD)</small></div></section>
-        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours follow thesis Figure 20 (and structural benchmarking figures); heatmap gradients are unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 − ρ)/complete linkage for Figure 15. <strong>Figure 14 AU support values are drawn from the original saved 1,000,000-replicate <code>pvclust</code> results and validated against the exported branch membership, AU/BP tables, and original Figure 14 PDFs. The root node is unlabelled, as in the thesis.</strong> Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/figure14_bootstrap_support.csv">Figure 14 AU/BP bootstrap data</a> · <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
+        <section class="inspector" aria-live="polite"><div><h3>Selected cell</h3><div class="big" id="cellTitle">Choose any cell to examine its score</div><p id="cellDescription">Move your cursor over a heatmap cell or click to examine a ligand-integrin interaction.</p></div><div class="scorepill"><strong id="cellScore">-</strong><small id="cellUnit">-log₁₀(KD)</small></div></section>
+        <section class="bottomnote" id="methods"><strong>About these figures.</strong> The input values come from <code>BindingScores_StatisticalAnalysis.xlsx</code>, cross-checked against raw KD from <code>All_Species_BindingScores.xlsx</code>. Figure 15 correlations were recalculated and checked against all 108 entries in the supplied correlation CSV. The blue, grey, magenta and olive-green model-identity colours follow thesis Figure 20 (and structural benchmarking figures); heatmap gradients are unchanged. Clustering uses Euclidean distance/complete linkage for Figures 14 and 16, and distance (1 - ρ)/complete linkage for Figure 15. <strong>Figure 14 AU support values are drawn from the original saved 1,000,000-replicate <code>pvclust</code> results and validated against the exported branch membership, AU/BP tables, and original Figure 14 PDFs. The root node is unlabelled, as in the thesis.</strong> Tree leaf orientation can differ from the published R figure while preserving the clustering structure. Data and methods: <a href="data/figure14_bootstrap_support.csv">Figure 14 AU/BP bootstrap data</a> · <a href="data/validation_report.json">validation report</a> · <a href="data/receptor_affinities.csv">all 432 scores</a> · <a href="data/species_medians.csv">species medians</a> · <a href="data/species_rank_correlations.csv">cross-species correlations</a>.</section>
       </div>
     </section>
   </main>
@@ -236,15 +236,15 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
     $('#figureId').textContent=`Figure ${figure} · interactive exploration`;
     if(figure==='14'){
       $('#figureTitle').textContent=`${nice} integrin binding-affinity profiles`;
-      $('#figureDescription').textContent='Predicted −log₁₀(KD) values for nine ligands across individual integrin models. Default clustering uses Euclidean distance and complete linkage; each species has an independent colour scale, as in the thesis.';
+      $('#figureDescription').textContent='Predicted -log₁₀(KD) values for nine ligands across individual integrin models. Default clustering uses Euclidean distance and complete linkage; each species has an independent colour scale, as in the thesis.';
       $('#method').innerHTML=`<b>${spec.rows.length} modeled receptors</b> × ${spec.cols.length} ligands · Euclidean / complete linkage`;
     }else if(figure==='15'){
-      $('#figureTitle').textContent=`${nice} ligand–ligand similarities`;
+      $('#figureTitle').textContent=`${nice} ligand-ligand similarities`;
       $('#figureDescription').textContent='Pairwise Spearman ρ values compare how two ligands rank receptor models within the selected species. These are not correlations of measurements from independent animals.';
-      $('#method').innerHTML=`<b>9 × 9 correlations</b> · cluster distance 1 − ρ · complete linkage`;
+      $('#method').innerHTML=`<b>9 × 9 correlations</b> · cluster distance 1 - ρ · complete linkage`;
     }else{
       $('#figureTitle').textContent='Cross-species median ligand-affinity profiles';
-      $('#figureDescription').textContent='Each cell is the median predicted −log₁₀(KD) across the complete receptor repertoire modeled for that species (human 8, sea urchin 24, sea anemone 16).';
+      $('#figureDescription').textContent='Each cell is the median predicted -log₁₀(KD) across the complete receptor repertoire modeled for that species (human 8, sea urchin 24, sea anemone 16).';
       $('#method').innerHTML='<b>3 species × 9 ligands</b> · unstandardized medians · Euclidean / complete linkage';
     }
     // Model identity is separate from the continuous affinity/correlation colour scale.
@@ -254,7 +254,7 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
     $('#modelContext').textContent = figure==='16' ? 'All three species · AlphaFold models' : (nice + ' · AlphaFold model');
     $('#legendMin').textContent=spec.min.toFixed(2);$('#legendMax').textContent=spec.max.toFixed(2);
     $('#gradient').classList.toggle('rho',spec.kind==='rho');
-    $('#legendDescription').textContent=spec.kind==='rho'?'Spearman ρ · −1 opposite ranks; +1 matching ranks':'Predicted −log₁₀(KD) · higher = stronger predicted binding';
+    $('#legendDescription').textContent=spec.kind==='rho'?'Spearman ρ · -1 opposite ranks; +1 matching ranks':'Predicted -log₁₀(KD) · higher = stronger predicted binding';
     $('#speciesControl').style.display=figure==='16'?'none':'';
     $('#scaleControl').style.display=figure==='14'?'':'none';
     $('#searchControl').style.display=figure==='15'?'none':'';
@@ -318,7 +318,7 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
       const ent=recIndex.get(`${spec.metadata.sp}|${row.key}|${col.key}`);
       title.textContent=`${ent.receptor_label} × ${col.key} · ${spec.metadata.sp}`;
       desc.textContent=`Computational model ${ent.receptor}; predicted KD = ${ent.kd_m.toExponential(3)} M. Subunits ${ent.alpha_subunit} + ${ent.beta_subunit}; docking prediction, not a measured equilibrium constant.`;
-      score.textContent=value.toFixed(3);unit.textContent='predicted −log₁₀(KD)';
+      score.textContent=value.toFixed(3);unit.textContent='predicted -log₁₀(KD)';
     }else if(figure==='15'){
       title.textContent=`${row.key} ↔ ${col.key} · ${spec.metadata.sp}`;
       desc.textContent=`Spearman rank correlation across ${D.clusters[spec.metadata.sp].figure14.row_ids.length} modelled receptors. A positive value indicates similar receptor rank ordering for these ligands; it does not measure agreement of absolute affinity magnitudes.`;
@@ -326,8 +326,8 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
     }else{
       const ent=medianIndex.get(`${row.key}|${col.key}`);
       title.textContent=`${col.key} · ${row.key}`;
-      desc.textContent=`Median predicted affinity across ${ent.n_receptors} different computational heterodimer models in this species. The median is taken directly from the −log₁₀(KD) scores, without re-transforming raw KD.`;
-      score.textContent=value.toFixed(3);unit.textContent='median −log₁₀(KD)';
+      desc.textContent=`Median predicted affinity across ${ent.n_receptors} different computational heterodimer models in this species. The median is taken directly from the -log₁₀(KD) scores, without re-transforming raw KD.`;
+      score.textContent=value.toFixed(3);unit.textContent='median -log₁₀(KD)';
     }
     all('.tile').forEach(x=>x.setAttribute('stroke-width','2'));
     all('.tile').forEach(x=>x.classList.remove('selectedtile'));
@@ -362,8 +362,8 @@ window.THESIS_DATA = {"receptors":[{"species":"H. sapiens","receptor":"avb1","re
         const rect=elem('rect',{x:x+1,y:y+1,width:cw-2,height:ch-2,rx:3,fill:base,stroke:'#f1f3f7','stroke-width':2,tabindex:0,role:'button','aria-label':`${r.label}, ${c.label}: ${v.toFixed(4)}`});
         rect.classList.add('tile');
         if(selectedId===chartCellId(r.key,c.key)){rect.classList.add('selectedtile');rect.setAttribute('stroke-width','3.5');}
-        rect.addEventListener('mouseenter',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted −log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
-        rect.addEventListener('mousemove',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted −log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
+        rect.addEventListener('mouseenter',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted -log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
+        rect.addEventListener('mousemove',e=>hint(e,`<strong>${escape(r.label)} × ${escape(c.label)}</strong><br>${v.toFixed(4)} ${isCorr?'Spearman ρ':'predicted -log₁₀(KD)'}<br><span style="color:#62728a">Click for interpretation</span>`));
         rect.addEventListener('mouseleave',hideHint);
         rect.addEventListener('click',()=>selectCell(spec,r,c,v,rect));
         rect.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectCell(spec,r,c,v,rect);}});

@@ -4,9 +4,9 @@ This directory is a self-contained static site implementing interactive companio
 
 ## Visual design and scientific colour meaning
 
-The model-identity colours follow the thesis structural figures: **human AlphaFold = blue `#396EA5`**, **human crystal structures = grey `#9EA5AF`**, **sea urchin AlphaFold = magenta `#A641A6`**, and **sea anemone AlphaFold = olive-green `#6F990C`**. The three species-model colours are approximated from the supplied Figure 20 screenshot; crystal grey is a neutral approximation following the requested crystal-structure convention. These are not necessarily the original PyMOL RGB settings. Structure colours appear on labels, strips, legends and accents. **Cell fill remains a continuous quantitative map**: Figures 14/16 represent `−log10(KD)` and Figure 15 represents ρ.
+The model-identity colours follow the thesis structural figures: **human AlphaFold = blue `#396EA5`**, **human crystal structures = grey `#9EA5AF`**, **sea urchin AlphaFold = magenta `#A641A6`**, and **sea anemone AlphaFold = olive-green `#6F990C`**. The three species-model colours are approximated from the supplied Figure 20 screenshot; crystal grey is a neutral approximation following the requested crystal-structure convention. These are not necessarily the original PyMOL RGB settings. Structure colours appear on labels, strips, legends and accents. **Cell fill remains a continuous quantitative map**: Figures 14/16 represent `-log10(KD)` and Figure 15 represents ρ.
 
-Grey only identifies crystal structure controls in the structure colour key. The Figure 14–16 plots themselves use the AlphaFold model affinity data, so the dashboard does not fabricate a crystal-structure comparison.
+Grey only identifies crystal structure controls in the structure colour key. The Figure 14-16 plots themselves use the AlphaFold model affinity data, so the dashboard does not fabricate a crystal-structure comparison.
 
 ## Directory files
 
@@ -24,7 +24,7 @@ Grey only identifies crystal structure controls in the structure colour key. The
 
 ## Validation performed
 
-The supplied `BindingScores_StatisticalAnalysis.xlsx` contains 48 unique receptor rows and nine numeric transformed affinity columns. All **432** `−log10(KD)` values agree with the corresponding raw KD values in `All_Species_BindingScores.xlsx` (maximum absolute discrepancy **8.88 × 10⁻¹⁶**). All **108** ligand-pair correlations agree with the supplied `Species_LigandPair_SpearmanCorrelations.csv` (maximum absolute discrepancy **5.00 × 10⁻¹⁶**). The independently recalculated cross-species Spearman coefficients are **0.9166667**, **0.9000000**, **0.9833333**.
+The supplied `BindingScores_StatisticalAnalysis.xlsx` contains 48 unique receptor rows and nine numeric transformed affinity columns. All **432** `-log10(KD)` values agree with the corresponding raw KD values in `All_Species_BindingScores.xlsx` (maximum absolute discrepancy **8.88 × 10⁻¹⁶**). All **108** ligand-pair correlations agree with the supplied `Species_LigandPair_SpearmanCorrelations.csv` (maximum absolute discrepancy **5.00 × 10⁻¹⁶**). The independently recalculated cross-species Spearman coefficients are **0.9166667**, **0.9000000**, **0.9833333**.
 
 No filtering, Z-scoring, imputation or second log transformation was applied. Species medians are calculated directly in transformed-score space. Note that the original workbook's `S.P_AFReceptors` tab has an inaccurate *N. vectensis* description in its note row; the species was identified using the worksheet's correct name, receptor IDs and contents, as in Script 02.
 
@@ -32,9 +32,9 @@ No filtering, Z-scoring, imputation or second log transformation was applied. Sp
 
 **Figure 14:** Receptor rows are clustered using Euclidean/complete linkage. Ligand columns use Euclidean/complete linkage as in the R `pvclust` workflow. In the dashboard, SciPy regenerated the tree from the numerical data. The original saved bootstrap `.rds` objects were **not uploaded**, so node-wise approximately unbiased (AU) support values are **not displayed**. The Figure 14 R script combines the `pvclust` ligand tree with its exact AU edges, which cannot be reconstructed simply from the score matrix without rerunning the bootstrap.
 
-**Figure 15:** Pairwise Spearman correlations were recalculated across receptors separately in each species. Rows and columns use the same correlation-based hierarchical clustering (1 − ρ, complete linkage); the value scale is fixed from −1 to +1. The **correlations match** the supplied CSV. Left/right tree orientation may differ from `pheatmap` output.
+**Figure 15:** Pairwise Spearman correlations were recalculated across receptors separately in each species. Rows and columns use the same correlation-based hierarchical clustering (1 - ρ, complete linkage); the value scale is fixed from -1 to +1. The **correlations match** the supplied CSV. Left/right tree orientation may differ from `pheatmap` output.
 
-**Figure 16:** Median −log10(KD) values are calculated separately for nine ligands across 8/24/16 models. Species and ligand axes use Euclidean/complete linkage and no standardization. The values and species-pair Spearman rankings reproduce the thesis. Interactive tree orientation can differ from R due to independent tie-handling.
+**Figure 16:** Median -log10(KD) values are calculated separately for nine ligands across 8/24/16 models. Species and ligand axes use Euclidean/complete linkage and no standardization. The values and species-pair Spearman rankings reproduce the thesis. Interactive tree orientation can differ from R due to independent tie-handling.
 
 These predictions do **not** demonstrate experimentally validated hormone binding or receptor activity. Modelled heterodimers are not independent biological samples.
 
@@ -71,7 +71,7 @@ These are required to place the exact published AU labels on the correct dendrog
 | `receptor_label` | Readable alpha/beta designation in the final thesis nomenclature |
 | `alpha_subunit`, `beta_subunit` | Readable constituent subunit names |
 | `ligand` | One of the nine submitted compounds |
-| `neg_log10_kd` | Predicted `−log10(KD)`, with raw KD in M; higher = stronger predicted binding |
+| `neg_log10_kd` | Predicted `-log10(KD)`, with raw KD in M; higher = stronger predicted binding |
 | `kd_m` | Original predicted dissociation constant in molar units, not an experimentally measured KD |
 
 In particular, for *N. vectensis*, the historical codes `aH6 → α3`, `aA9 → α9`, `aA5 → α5`, `a71 → α8`, and `bW0 → β2`, `bU5 → βn2`, `bD5 → β1`, `b23 → βb` follow the mapping in `02_Prepare_Integrin_BindingData.R`.
