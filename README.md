@@ -7,7 +7,7 @@ Dilma Karunathilake · Heyland Lab
 
 [![Preview of the light-pastel interactive thesis results atlas](docs/assets/dashboard-preview.png)](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/)
 
-*Click the preview to explore Figures 14–16: receptor–ligand affinity heatmaps with original AU bootstrap support, ligand correlations, and cross-species median profiles.*
+*Click the preview to explore Figures 14-16: receptor–ligand affinity heatmaps with original AU bootstrap support, ligand correlations, and cross-species median profiles.*
 
 ## Abstract
 
