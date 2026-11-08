@@ -13,7 +13,7 @@ Integrin αVβ3 mediates non-genomic thyroid hormone signaling, but whether this
 
 **48 integrin models · 9 ligands · 432 computational binding-affinity predictions · 3 species**
 
-- **Interactive atlas:** [Open the website](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/) for interactive versions of thesis Figures 14–16.
+- **Interactive atlas:** [Open the website](https://dkarunat123.github.io/MSc.-Structural-Analysis-of-RGD-Binding-Integrins-and-Their-Ability-to-Bind-Thyroid-Hormones/) for interactive versions of thesis Figures 14-16.
 - **`Data/` and `Results/`:** analysis inputs and derived outputs.
 - **`Scripts/`:** R and Python scripts used for data processing, statistics, clustering, and figure generation.
 - **`Docking/` and `Figures/`:** structural models, docking files, and figure-related materials.
