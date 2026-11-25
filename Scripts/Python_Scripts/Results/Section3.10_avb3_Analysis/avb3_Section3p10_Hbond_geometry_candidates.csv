@@ -1,0 +1,11 @@
+Ligand,Direction,Receptor_residue,Protein_atom,Ligand_atom,Donor_atom,Hydrogen_atom,Acceptor_atom,Donor_acceptor_A,Hydrogen_acceptor_A,D_H_A_angle_degrees
+T3,ligand_to_protein,Asn A1234,O,N1,N1,HN11,O,3.121,2.476,121.7
+T3,ligand_to_protein,Asp A1236,O,N1,N1,HN12,O,2.917,2.222,125.5
+TETRAC,protein_to_ligand,Ser A1140,OG,O4,OG,HG,O4,3.345,2.58,137.3
+TRIAC,protein_to_ligand,Ser A1140,OG,O4,OG,HG,O4,3.157,2.408,134.7
+TRIAC,protein_to_ligand,Ser A1142,N,O4,N,HN,O4,3.032,2.224,138.6
+rT3,ligand_to_protein,Asp A248,OD2,O4,O4,HAA,OD2,3.021,2.177,140.8
+rT3,ligand_to_protein,Ser A1142,OG,N1,N1,HN12,OG,3.082,2.287,135.6
+sT3,protein_to_ligand,Ser A1142,N,O6,N,HN,O6,3.065,2.23,141.8
+sT4,protein_to_ligand,Ser A1140,OG,O6,OG,HG,O6,3.042,2.248,140
+sT4,protein_to_ligand,Ser A1142,N,O6,N,HN,O6,2.99,2.217,134.2
