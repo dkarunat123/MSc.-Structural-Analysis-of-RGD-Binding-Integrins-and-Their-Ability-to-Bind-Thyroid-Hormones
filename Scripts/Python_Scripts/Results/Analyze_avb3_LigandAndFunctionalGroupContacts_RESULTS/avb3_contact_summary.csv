@@ -1,0 +1,10 @@
+Ligand,Ligand_heavy_atoms,Contact_residues_within_4A,Potential_polar_atom_pairs_within_3.5A,Mn_sites_within_4A,Closest_Mn,Closest_Mn_ligand_atom,Closest_Mn_distance_A,Closest_receptor_residue,Closest_receptor_atom,Closest_receptor_ligand_atom,Closest_receptor_distance_A
+Cilengitide,42,12,4,1,MN2 A9007,O7,1.654,ASN A1234,OD1,O7,2.73
+T3,23,8,6,1,MN2 A9007,O3,1.54,ASN A1234,OD1,N1,2.736
+T4,24,8,8,1,MN2 A9007,O3,1.604,ASN A1234,OD1,N1,2.738
+T4AM,21,3,1,0,MN2 A9006,I2,7.79,ASP A1145,O,C3,2.998
+TETRAC,22,8,5,1,MN2 A9007,O3,1.569,GLU A1239,OE1,O3,2.813
+TRIAC,21,8,6,1,MN2 A9007,O2,1.574,ASN A1234,OD1,C3,2.868
+rT3,23,9,6,1,MN2 A9007,O3,1.74,ASP A1270,OD1,N1,2.816
+sT3,27,8,8,1,MN2 A9007,O7,1.517,ASP A1270,O,O1,2.717
+sT4,28,7,9,1,MN2 A9007,O7,1.569,ASN A1234,OD1,O5,2.682

@@ -1,0 +1,27 @@
+Ligand,Functional_group,Group_atom,Mn_residue,Distance_A
+T3,carboxyl_group,O3,MN2 A9007,1.54
+T3,carboxyl_group,C9,MN2 A9007,2.67
+T3,carboxyl_group,O2,MN2 A9007,3.273
+T4,carboxyl_group,O3,MN2 A9007,1.604
+T4,carboxyl_group,C9,MN2 A9007,2.69
+T4,carboxyl_group,O2,MN2 A9007,3.291
+TETRAC,carboxyl_group,O3,MN2 A9007,1.569
+TETRAC,carboxyl_group,C14,MN2 A9007,2.393
+TETRAC,carboxyl_group,O4,MN2 A9007,2.984
+TRIAC,carboxyl_group,O2,MN2 A9007,1.574
+TRIAC,carboxyl_group,C11,MN2 A9007,2.426
+TRIAC,carboxyl_group,O4,MN2 A9007,3.117
+rT3,carboxyl_group,O3,MN2 A9007,1.74
+rT3,carboxyl_group,C9,MN2 A9007,2.954
+rT3,carboxyl_group,O2,MN2 A9007,3.686
+sT3,sulfate_group,O7,MN2 A9007,1.517
+sT3,sulfate_group,S1,MN2 A9007,2.785
+sT3,sulfate_group,O6,MN2 A9007,3.164
+sT3,sulfate_group,O5,MN2 A9007,3.458
+sT3,sulfate_group,O4,MN2 A9007,3.864
+sT4,iodine_substituents,I4,MN2 A9007,3.815
+sT4,sulfate_group,O7,MN2 A9007,1.569
+sT4,sulfate_group,S1,MN2 A9007,2.71
+sT4,sulfate_group,O6,MN2 A9007,3.163
+sT4,sulfate_group,O5,MN2 A9007,3.169
+sT4,sulfate_group,O3,MN2 A9007,3.896
